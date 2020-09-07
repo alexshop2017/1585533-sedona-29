@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Седов](https://up.htmlacademy.ru/htmlcss/29/user/1585533).
-* Наставник: [Алексей Чимочихин](https://up.htmlacademy.ru/htmlcss/29/tutors). [Не подтвежден]
+* Наставник: [Алексей Чимочихин](https://htmlacademy.ru/profile/id1449979).
 
 ---
 
