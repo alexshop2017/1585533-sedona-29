@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-  <header>
-      <nav>
-        <a href="index.html"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></a>
-        <ul>
+  <body class="page-body">
+  <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></a>
+        <ul class="site-navigation">
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и Видео</a></li>
           <li><a href="">Карта штата</a></li>
@@ -16,17 +19,19 @@
         </ul>
       </nav>
   </header>
-  <main>
+  
+  <main class="container">
     
-    <h1>Седона</h1> <!--TODO: невидимый заголовок-->
+    <h1 class="city-header">Седона</h1>
 
-    <img src="https://via.placeholder.com/1200x509" width="1200" height="509" alt="Седона">
-    <p>Седона - Небольшой городок в Аризоне<br>Заслуживающий большего!</p>
-    <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
+    <div class="main-photo"><img src="https://via.placeholder.com/1200x509" width="1200" height="509" alt="Седона"></div>
+    <p class="city-description">Седона - Небольшой городок в Аризоне,<br>Заслуживающий большего!</p>
+    <p class="sight-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
 
-    <section>
-      <div>
-        <h3>Настоящий городок</h3>
+    <!--первая причина-->
+    <section class="primary-sight-text-box">
+      <h3 class="primary-sight-header">Настоящий городок</h3>
+      <div class="primary-sight-description">
         <p>- №1 -</p>
         <p>Седона - не аттракцион для туристов, там<br>
           течёт своя жизнь
@@ -35,35 +40,35 @@
       <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Фото1">
     </section>
 
-    <section>
-      <section>
-        <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="HouseLogo">  
-        <p>Жильё</p>
-        <p>Рекомендуем пожить в настоящем<br>
+    <section class="features">
+      <div>
+        <img class="feature-icon" src="https://via.placeholder.com/75x72" width="75" height="72" alt="HouseLogo">  
+        <p class="feature-header">Жильё</p>
+        <p class="feature-description">Рекомендуем пожить в настоящем<br>
           мотеле, всё как в кино
         </p>
-      </section>
-      <section>
+      </div>
+      <div>
         <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="FoodLogo">  
-        <p>Еда</p>
-        <p>Всегда заказывайте фирменный бургер,<br>
+        <p class="feature-header">Еда</p>
+        <p class="feature-description">Всегда заказывайте фирменный бургер,<br>
           вы не разочаруетесь
         </p>
-      </section>
-      <section>
+      </div>
+      <div>
         <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="PresentLogo">  
-        <p>Сувениры</p>
-        <p>Не только китайского, но и местного<br>
+        <p class="feature-header">Сувениры</p>
+        <p class="feature-description">Не только китайского, но и местного<br>
           производства!
         </p>
-      </section>
+      </div>
     </section>
 
     <!--вторая причина-->
-    <section>
+    <section class="primary-sight-text-box">
       <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Фото2">
-      <div>
-        <h3>Там есть<br>Мост Дьявола</h3>
+      <h3 class="primary-sight-header">Там есть<br>Мост Дьявола</h3>
+      <div class="primary-sight-description">
         <p>- №2 -</p>
         <p>Да, по нему можно пройти! Если конечно<br>
           вы осмелитесь
@@ -71,61 +76,67 @@
       </div>
     </section>
 
-    <section>
-      <section>
-        <h3>Небольшая площадь</h3>
-        <p>- №2 -</p>
-        <p>Все достопримечательности<br>
-          находятся очень близко
-        </p>
-      </section>
-      <section>
-        <h3>Красивая дорога</h3>
-        <p>- №4 -</p>
-        <p>Ехать в Седону из Лас-Вегаса совсем<br>
-          не скучно!
-        </p>
-      </section>
-      <section>
-        <h3>Мало туристов</h3>
-        <p>- №5 -</p>
-        <p>Большинство едет в Гранд Каньон<br>
-          и толпится там
-        </p>
-      </section>
+    <section class="secondary-sight-text-box">
+      <div>
+        <h3 class="secondary-sight-header">Небольшая площадь</h3>
+        <div class="secondary-sight-description">
+          <p>- №2 -</p>
+          <p>Все достопримечательности<br>
+            находятся очень близко
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3 class="secondary-sight-header">Красивая дорога</h3>
+        <div class="secondary-sight-description">
+          <p>- №4 -</p>
+          <p>Ехать в Седону из Лас-Вегаса совсем<br>
+            не скучно!
+          </p>
+        </div>
+      </div>
+      <div>
+        <h3 class="secondary-sight-header">Мало туристов</h3>
+        <div class="secondary-sight-description">
+          <p>- №5 -</p>
+          <p>Большинство едет в Гранд Каньон<br>
+            и толпится там
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки,<br>
+    <section class="hotel-search-intro">
+      <p class="hotel-search-intro-header"><span>Заинтересовались?</span></p>
+      <p class="hotel-search-intro-description">Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     </section>
 
-    <section>
-      <h2>Поиск гостиницы в Седоне</h2>
+    <section class="hotel-search-box">
+      <h2 class="hotel-search-header">Поиск гостиницы в Седоне</h2>
       <section> <!--TODO: фоновая карта-->
         <label>Дата заезда: <button id="date-from"></button></label>
         <label>Дата выезда: <button id="date-to"></button></label>
         <label>Взрослые:<button>-</button><output></output><button>+</button></label>
         <label>Дети:<button>-</button><output></output><button>+</button></label>
-        <button>Найти</button>
+        <button class="button hotel-search-button">Найти</button>
       </section>
     </section>
   </main>
 
-  <footer>
-    <section>
+  <footer class="main-footer">
+    <section class="contacts">
       <p>#VISITSEDONA</p>
-      <p>Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+      <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
     </section>
     <section>
-      <ul> <!--TODO: фон для иконок-->
-        <li><a href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
+      <ul class="social-network-links"> <!--TODO: фон для иконок-->
+        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
+        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
+        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
       </ul>
     </section>
-    <section>
+    <section class="htmlacademy">
       <p>Website by<a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/115x41" width="115" height="41" alt="htmlacademy"></a></p>
     </section>
   </footer>

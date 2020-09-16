@@ -1,0 +1,257 @@
+:root
+{
+    /* общие цвета */
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --invert-text-color: #FFFFFF;
+    --light-blue-color: #81B3D2;
+    --brown-color: #766357;
+    --light-gray-color: #EEEEEE;
+    --dark-gray-color: #333333;
+    /* эти цвета используются только на странице с отелями */
+    --line-color: #E5E5E5;
+    --rate-text-color: #666666;
+    --rate-background-color: #F2F2F2;
+}
+
+body
+{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header
+{
+    background-color: var(--background-color);
+}
+
+.site-navigation li
+{
+    list-style-type: none;
+}
+
+.site-navigation a
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.container
+{
+    background-color: var(--background-color);
+}
+
+.main-photo
+{
+    text-align: center;
+}
+
+.city-header
+{
+    display: none;
+}
+
+.city-description
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sight-intro
+{
+    color: var(--dark-gray-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.primary-sight-text-box
+{
+    background-color: var(--light-blue-color);
+}
+
+.primary-sight-header
+{
+    color: var(--invert-text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.primary-sight-description
+{
+    color: var(--invert-text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.feature-header
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.feature-description
+{
+    color: var(--dark-gray-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secondary-sight-text-box
+{
+    background-color: var(--light-gray-color);
+}
+
+.secondary-sight-header
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secondary-sight-description
+{
+    color: var(--dark-gray-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hotel-search-intro-header
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hotel-search-intro-description
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hotel-search-header
+{
+    color: var(--invert-text-color);
+    background-color: var(--brown-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hotel-search-button
+{
+    color: var(--invert-text-color);
+    background-color: var(--light-blue-color);
+}
+
+.contacts,
+.contacts a
+{
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.social-network-links li
+{
+    list-style-type: none;
+}
+
+.social-network-links img
+{
+    background-color: var(--light-blue-color);
+}
+
+.htmlacademy
+{
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
