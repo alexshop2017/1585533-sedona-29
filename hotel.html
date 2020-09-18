@@ -52,9 +52,9 @@
             <button class="hotel-filter-button">Показать</button>
         </div>
     </section>
-    <section class="hotel-sort-box">
-        <!-- средняя секция -->
-        <div>
+    <section class="hotel-box">
+        <!-- сортировка отелей -->
+        <div class="hotel-sort-box">
             <span class="hotel-count">Найдено:<output class="hotel-count-output">3</output></span>
             <span class="hotel-sort-legend">Сортировка:</span>
             <ol>
@@ -67,10 +67,64 @@
                 <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
             </section>
         </div>
-        <!-- нижняя секция -->
-        <div>
-            <!-- TODO: повторяющиеся элементы с отелями, скорей всего это будет не список (flex или таблица, поэтому отложил создание) -->
-        </div>
+        <!-- номера отелей -->
+        <!-- временно сделал через таблицу (чтобы задать стили), потом переделаю-->
+        <table class="hotel-offers">
+            <tr class="hotel-offer">
+              <td>
+                <div class="hotel-preview-photo"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="фото отеля"></div>
+              </td>
+              <td>
+                <h2 class="hotel-name">Amara Resort & Spa</h2>
+                <p class="hotel-kind">Гостиница</p>
+                <p class="hotel-price">От 4000 Р.</p>
+              </td>
+              <td>
+                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button class="brown-button hotel-booking-button">Забронировать</button>
+              </td>
+              <td>
+                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
+                <div class="hotel-rate">Рейтинг: 8,5</div> <!--Как быть с локализацией? Разделитель целых и дробных частей-->
+              </td>
+            </tr>
+            <tr class="hotel-offer">
+              <td>
+                <div class="hotel-preview-photo"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="фото отеля"></div>
+              </td>
+              <td>
+                <h2 class="hotel-name">Desert Quail Inn</h2>
+                <p class="hotel-kind">Мотель</p>
+                <p class="hotel-price">От 3000 Р.</p>
+              </td>
+              <td>
+                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button class="brown-button hotel-booking-button">Забронировать</button>
+              </td>
+              <td>
+                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
+                <div class="hotel-rate">Рейтинг: 8,9</div>
+              </td>
+            </tr>
+            <tr class="hotel-offer">
+              <td>
+                <div class="hotel-preview-photo"><img src="https://via.placeholder.com/135x90" width="135" height="90" alt="фото отеля"></div>
+              </td>
+              <td>
+                <h2 class="hotel-name">Villas at Poco Diablo</h2>
+                <p class="hotel-kind">Апартаменты</p>
+                <p class="hotel-price">От 2000 Р.</p>
+              </td>
+              <td>
+                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button class="brown-button hotel-booking-button">Забронировать</button>
+              </td>
+              <td>
+                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
+                <div class="hotel-rate">Рейтинг: 9,2</div>
+              </td>
+            </tr>
+        </table>
     </section>
   </main>
 

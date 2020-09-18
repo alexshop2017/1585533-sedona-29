@@ -5,6 +5,7 @@
     --text-color: #000000;
     --invert-text-color: #FFFFFF;
     --white-color: #FFFFFF;
+    --gray-text-color: #333333;
 
     /*оттенки голубого*/
     --light-blue-color: #81B3D2;
@@ -22,7 +23,7 @@
     --high-dark-brown-color: #503E33;
 
     /* эти цвета используются только на странице с отелями */
-    --line-color: #E5E5E5;
+    --hotel-separator-line-color: #E5E5E5;
     --rate-text-color: #666666;
     --rate-background-color: #F2F2F2;
     --disabled-gray-color: #6A6A6A;
@@ -99,7 +100,7 @@ img {
 
 .city-description {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -110,7 +111,7 @@ img {
 
 .sight-intro {
     color: var(--dark-gray-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -125,7 +126,7 @@ img {
 
 .primary-sight-header {
     color: var(--invert-text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -136,7 +137,7 @@ img {
 
 .primary-sight-description {
     color: var(--invert-text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
@@ -147,7 +148,7 @@ img {
 
 .feature-header {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -158,7 +159,7 @@ img {
 
 .feature-description {
     color: var(--dark-gray-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -173,7 +174,7 @@ img {
 
 .secondary-sight-header {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -184,7 +185,7 @@ img {
 
 .secondary-sight-description {
     color: var(--dark-gray-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -195,7 +196,7 @@ img {
 
 .hotel-search-intro-header {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -206,7 +207,7 @@ img {
 
 .hotel-search-intro-description {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -218,7 +219,7 @@ img {
 .hotel-search-header {
     color: var(--invert-text-color);
     background-color: var(--brown-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -227,15 +228,28 @@ img {
     text-align: center;
 }
 
+.hotel-search-header-button
+{
+    border: none;
+}
+
+.brown-button
+{
+    color: var(--invert-text-color);
+    background-color: var(--brown-color);
+}
+
+.brown-button:hover,
 .hotel-search-header:hover {
     background-color: var(--medium-dark-brown-color);
 }
 
+.brown-button:active,
 .hotel-search-header:active {
     background-color: var(--high-dark-brown-color);
 }
 
-.hotel-search-button {
+.blue-button {
     color: var(--invert-text-color);
     background-color: var(--light-blue-color);
 }
@@ -259,7 +273,7 @@ img {
 
 .hotel-filter-legend {
     color: var(--invert-text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -280,7 +294,7 @@ img {
 
 .hotel-filter-input {
     color: var(--invert-text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -308,7 +322,7 @@ img {
 
 .hotel-count {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -339,7 +353,7 @@ img {
     border-bottom: var(--light-blue-color) dotted 1px;
 }
 
-.hotel-sort-kind-activated {
+.hotel-sort-kind-selected {
     color: var(--light-blue-color);
     border: none;
 }
@@ -367,13 +381,64 @@ img {
     color: var(--light-gray-color);
 }
 
+/* предложения с отелями */
+
+table.hotel-offers {
+    border-collapse: collapse;
+}
+
+.hotel-offer td {
+    border-color: var(--hotel-separator-line-color);
+    border-style: solid;
+    border-top: 1;
+    border-bottom: 1;
+    border-left: 0;
+    border-right: 0;
+}
+
+.hotel-name {
+    color: var(--text-color);
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.hotel-kind,
+.hotel-price {
+    color: var(--gray-text-color);
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.hotel-rate-stars {
+    color: var(--light-blue-color);
+}
+
+.hotel-rate {
+    color: var(--rate-text-color);
+    background: var(--rate-background-color);
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
 /* footer */
 
 .contacts,
 .contacts a {
     color: var(--text-color);
     background-color: var(--background-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
@@ -391,7 +456,7 @@ img {
 
 .htmlacademy {
     color: var(--text-color);
-    font-family: PT Sans;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
