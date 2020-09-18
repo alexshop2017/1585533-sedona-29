@@ -4,6 +4,7 @@
     --background-color: #FFFFFF;
     --text-color: #000000;
     --invert-text-color: #FFFFFF;
+    --white-color: #FFFFFF;
 
     /*оттенки голубого*/
     --light-blue-color: #81B3D2;
@@ -24,7 +25,10 @@
     --line-color: #E5E5E5;
     --rate-text-color: #666666;
     --rate-background-color: #F2F2F2;
+    --disabled-gray-color: #6A6A6A;
 }
+
+/* общие свойства */
 
 body {
     min-width: 1200px;
@@ -45,9 +49,13 @@ img {
     height: auto;
 }
 
+/* header */
+
 .main-header {
     background-color: var(--background-color);
 }
+
+/* навишация по сайту */
 
 .site-navigation li {
     list-style-type: none;
@@ -63,6 +71,10 @@ img {
     text-transform: uppercase;
 }
 
+.site-navigation-button-selected {
+    color: var(--brown-color);
+}
+
 .site-navigation-button:hover {
     color: var(--light-blue-color);
 }
@@ -75,12 +87,14 @@ img {
     background-color: var(--background-color);
 }
 
-.main-photo {
-    text-align: center;
+.invisible-header {
+    display: none;
 }
 
-.city-header {
-    display: none;
+/* main page */
+
+.main-photo {
+    text-align: center;
 }
 
 .city-description {
@@ -233,6 +247,127 @@ img {
 .blue-button:active {
     background-color: var(--dark-blue-color);
 }
+
+/* hotel page */
+
+/* параметры поиска отелей */
+
+.hotel-filter-box {
+    width: 1200px;
+    background-color: var(--light-blue-color);
+}
+
+.hotel-filter-legend {
+    color: var(--invert-text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+.hotel-filter-checkbox {
+    color: var(--white-color);
+    background: transparent;
+}
+
+.hotel-filter-checkbox:disabled
+{
+    color: var(--disabled-gray-color);
+}
+
+.hotel-filter-input {
+    color: var(--invert-text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    background: transparent;
+}
+
+.hotel-filter-range {
+    color: var(--white-color);
+}
+
+.hotel-filter-button {
+    color: var(--white-color);
+    background: transparent;
+    border: 2px solid --var(--white-color);
+}
+
+.hotel-filter-button:hover
+{
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* количество отелей */
+
+.hotel-count {
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.hotel-sort-legend {
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+/* опции сортировки */
+
+.hotel-sort-kind {
+    color: var(--text-color);
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 0.3;
+    border-bottom: var(--light-blue-color) dotted 1px;
+}
+
+.hotel-sort-kind-activated {
+    color: var(--light-blue-color);
+    border: none;
+}
+
+.hotel-sort-kind:hover {
+    color: var(--light-blue-color);
+}
+
+.hotel-sort-kind:active {
+    color: var(--light-gray-color);
+    border: none;
+}
+
+/* кнопки сортировки */
+
+.hotel-sort-order-button {
+    color: var(--light-gray-color);
+}
+
+.hotel-sort-order-button-active {
+    color: var(--light-blue-color);
+}
+
+.hotel-sort-order-button {
+    color: var(--light-gray-color);
+}
+
+/* footer */
 
 .contacts,
 .contacts a {

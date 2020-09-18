@@ -3,85 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>Отели в Седоне</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-  <header>
-      <nav>
-        <a href="index.html"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></a>
-        <ul>
-          <li><a href="">Информация</a></li>
-          <li><a href="">Фото и Видео</a></li>
-          <li><a href="">Карта штата</a></li>
-          <li><span>Гостиницы</span></li>
+  <body class="page-body">
+  <header class="main-header">
+      <nav class="main-navigation">
+        <div class="main-header-logo"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></div>
+        <ul class="site-navigation">
+          <li><a class="site-navigation-button" href="">Информация</a></li>
+          <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
+          <li><a class="site-navigation-button" href="">Карта штата</a></li>
+          <li><span class="site-navigation-button site-navigation-button-selected">Гостиницы</span></li>
         </ul>
       </nav>
   </header>
 
-  <main>
-    <h1>Отели в Седоне</h1> <!--TODO: невидимый заголовок-->
+  <main class="container">
+
+    <h1 class="invisible-header">Отели в Седоне</h1>
 
     <!-- верхняя секция -->
-    <section>
+    <section class="hotel-filter-box">
         <!-- левая секция -->
-        <section> <!-- фоновая картинка через стиль? -->
+        <div> <!-- фоновая картинка через стиль? -->
             <fieldset>
-                <legend>Инфраструктура:</legend>
-                <input type="checkbox">Бассейн</input>
-                <input type="checkbox">Парковка</input>
-                <input type="checkbox">Wi-Fi</input>
+                <legend class="hotel-filter-legend">Инфраструктура:</legend>
+                <input class="hotel-filter-checkbox" type="checkbox">Бассейн</input>
+                <input class="hotel-filter-checkbox" type="checkbox">Парковка</input>
+                <input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input>
             </fieldset>
             <fieldset>
-                <legend>Тип жилья:</legend>
-                <input type="checkbox">Гостиница</input>
-                <input type="checkbox">Мотель</input>
-                <input type="checkbox">Апартаменты</input>
+                <legend class="hotel-filter-legend">Тип жилья:</legend>
+                <input class="hotel-filter-checkbox" type="checkbox">Гостиница</input>
+                <input class="hotel-filter-checkbox" type="checkbox">Мотель</input>
+                <input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input>
             </fieldset>
-        </section>
+        </div>
         <!-- правая секция -->
-        <section>
+        <div>
             <fieldset>
-                <legend>Стоимость в сутки:</legend>
-                От: <input type="number"></input>
-                До: <input type="number"></input>
-                <input type="range"></input>
+                <legend class="hotel-filter-legend">Стоимость в сутки:</legend>
+                От: <input class="hotel-filter-input" type="number"></input>
+                До: <input class="hotel-filter-input" type="number"></input>
+                <input class="hotel-filter-range" type="range"></input>
             </fieldset>
-            <button>Показать</button>
-        </section>
+            <button class="hotel-filter-button">Показать</button>
+        </div>
     </section>
-    <section>
+    <section class="hotel-sort-box">
         <!-- средняя секция -->
-        <section>
-            <div>Найдено:<output>3</output></div>
+        <div>
+            <span class="hotel-count">Найдено:<output class="hotel-count-output">3</output></span>
+            <span class="hotel-sort-legend">Сортировка:</span>
             <ol>
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По рейтингу</li>
+                <li class="hotel-sort-kind">По цене</li>
+                <li class="hotel-sort-kind">По типу</li>
+                <li class="hotel-sort-kind">По рейтингу</li>
             </ol>
             <section>
-                <button><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по возрастанию"></button>
-                <button><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
+                <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по возрастанию"></button>
+                <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
             </section>
-        </section>
+        </div>
         <!-- нижняя секция -->
-        <section>
+        <div>
             <!-- TODO: повторяющиеся элементы с отелями, скорей всего это будет не список (flex или таблица, поэтому отложил создание) -->
-        </section>
+        </div>
     </section>
   </main>
 
-  <footer>
-    <section>
+  <footer class="main-footer">
+    <section class="contacts">
       <p>#VISITSEDONA</p>
-      <p>Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+      <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
     </section>
     <section>
-      <ul> <!--TODO: фон для иконок-->
-        <li><a href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
+      <ul class="social-network-links"> <!--TODO: фон для иконок-->
+        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
+        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
+        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
       </ul>
     </section>
-    <section>
+    <section class="htmlacademy">
       <p>Website by<a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/115x41" width="115" height="41" alt="htmlacademy"></a></p>
     </section>
   </footer>
