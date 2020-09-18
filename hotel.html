@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Отели в Седоне</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -15,7 +15,7 @@
           <li><a class="site-navigation-button" href="">Информация</a></li>
           <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
           <li><a class="site-navigation-button" href="">Карта штата</a></li>
-          <li><span class="site-navigation-button site-navigation-button-selected">Гостиницы</span></li>
+          <li><span class="site-navigation-button-selected">Гостиницы</span></li>
         </ul>
       </nav>
   </header>
@@ -25,32 +25,34 @@
     <h1 class="invisible-header">Отели в Седоне</h1>
 
     <!-- верхняя секция -->
-    <section class="hotel-filter-box">
+    <section class="hotel-filter-box"> <!-- фоновая картинка через стиль? -->
+      <form>
         <!-- левая секция -->
-        <div> <!-- фоновая картинка через стиль? -->
+        <div>
             <fieldset>
                 <legend class="hotel-filter-legend">Инфраструктура:</legend>
-                <input class="hotel-filter-checkbox" type="checkbox">Бассейн</input>
-                <input class="hotel-filter-checkbox" type="checkbox">Парковка</input>
-                <input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Бассейн</input></div>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Парковка</input></div>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input></div>
             </fieldset>
             <fieldset>
                 <legend class="hotel-filter-legend">Тип жилья:</legend>
-                <input class="hotel-filter-checkbox" type="checkbox">Гостиница</input>
-                <input class="hotel-filter-checkbox" type="checkbox">Мотель</input>
-                <input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Гостиница</input></div>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Мотель</input></div>
+                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input></div>
             </fieldset>
         </div>
         <!-- правая секция -->
         <div>
-            <fieldset>
-                <legend class="hotel-filter-legend">Стоимость в сутки:</legend>
-                От: <input class="hotel-filter-input" type="number"></input>
-                До: <input class="hotel-filter-input" type="number"></input>
-                <input class="hotel-filter-range" type="range"></input>
+           <fieldset>
+              <legend class="hotel-filter-legend">Стоимость в сутки:</legend>
+              <div class="hotel-filter-input">От: <input type="number"></input></div>
+              <div class="hotel-filter-input">До: <input type="number"></input></div>
+              <input class="hotel-filter-range" type="range"></input>
             </fieldset>
             <button class="hotel-filter-button">Показать</button>
         </div>
+      </form>
     </section>
     <section class="hotel-box">
         <!-- сортировка отелей -->
@@ -58,13 +60,13 @@
             <span class="hotel-count">Найдено:<output class="hotel-count-output">3</output></span>
             <span class="hotel-sort-legend">Сортировка:</span>
             <ol>
-                <li class="hotel-sort-kind">По цене</li>
-                <li class="hotel-sort-kind">По типу</li>
-                <li class="hotel-sort-kind">По рейтингу</li>
+              <li class="hotel-sort-kind">По цене</li>
+              <li class="hotel-sort-kind">По типу</li>
+              <li class="hotel-sort-kind">По рейтингу</li>
             </ol>
             <section>
-                <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по возрастанию"></button>
-                <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
+              <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по возрастанию"></button>
+              <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
             </section>
         </div>
         <!-- номера отелей -->

@@ -4,8 +4,10 @@
     --background-color: #FFFFFF;
     --text-color: #000000;
     --invert-text-color: #FFFFFF;
-    --white-color: #FFFFFF;
-    --gray-text-color: #333333;
+    --secondary-text-color: #333333;
+    
+    --button-invert-color: #FFFFFF;
+    --button-invert-disabled-color: #333333;
 
     /*оттенки голубого*/
     --light-blue-color: #81B3D2;
@@ -33,10 +35,9 @@
 
 body {
     min-width: 1200px;
-    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
-    font-weight: 700;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -62,10 +63,9 @@ img {
     list-style-type: none;
 }
 
+.site-navigation,
 .site-navigation a {
     color: var(--text-color);
-    font-family: PT Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
@@ -100,8 +100,6 @@ img {
 
 .city-description {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -111,10 +109,6 @@ img {
 
 .sight-intro {
     color: var(--dark-gray-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
     text-align: center;
@@ -126,8 +120,6 @@ img {
 
 .primary-sight-header {
     color: var(--invert-text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 21px;
@@ -137,9 +129,6 @@ img {
 
 .primary-sight-description {
     color: var(--invert-text-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
     font-size: 21px;
     line-height: 21px;
     text-transform: uppercase;
@@ -148,8 +137,6 @@ img {
 
 .feature-header {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 21px;
@@ -159,9 +146,6 @@ img {
 
 .feature-description {
     color: var(--dark-gray-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
@@ -174,8 +158,6 @@ img {
 
 .secondary-sight-header {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 21px;
@@ -185,10 +167,6 @@ img {
 
 .secondary-sight-description {
     color: var(--dark-gray-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
@@ -196,8 +174,6 @@ img {
 
 .hotel-search-intro-header {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 24px;
@@ -207,10 +183,6 @@ img {
 
 .hotel-search-intro-description {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
@@ -219,8 +191,6 @@ img {
 .hotel-search-header {
     color: var(--invert-text-color);
     background-color: var(--brown-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -237,6 +207,7 @@ img {
 {
     color: var(--invert-text-color);
     background-color: var(--brown-color);
+    border: none;
 }
 
 .brown-button:hover,
@@ -252,6 +223,7 @@ img {
 .blue-button {
     color: var(--invert-text-color);
     background-color: var(--light-blue-color);
+    border: none;
 }
 
 .blue-button:hover {
@@ -271,59 +243,62 @@ img {
     background-color: var(--light-blue-color);
 }
 
+.hotel-filter-box fieldset {
+    border: none;
+}
+
 .hotel-filter-legend {
     color: var(--invert-text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
     text-transform: uppercase;
-    background: transparent;
+    background-color: transparent;
+}
+
+.hotel-filter-text {
+    color: var(--button-invert-color);
+    font-size: 14px;
+    line-height: 21px;
+    background-color: transparent;
 }
 
 .hotel-filter-checkbox {
-    color: var(--white-color);
-    background: transparent;
+    background-color: transparent;
 }
 
 .hotel-filter-checkbox:disabled
 {
-    color: var(--disabled-gray-color);
+    color: var(--button-invert-disabled-color);
 }
 
 .hotel-filter-input {
     color: var(--invert-text-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 21px;
-    background: transparent;
+    background-color: transparent;
 }
 
 .hotel-filter-range {
-    color: var(--white-color);
+    color: var(--button-invert-color);
 }
 
 .hotel-filter-button {
-    color: var(--white-color);
-    background: transparent;
-    border: 2px solid --var(--white-color);
+    color: var(--button-invert-color);
+    background-color: transparent;
+    border: 2px solid var(--button-invert-color);
 }
 
 .hotel-filter-button:hover
 {
     color: var(--text-color);
     background-color: var(--background-color);
+    border: 2px solid var(--text-color);
 }
 
 /* количество отелей */
 
 .hotel-count {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -332,9 +307,6 @@ img {
 
 .hotel-sort-legend {
     color: var(--text-color);
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
@@ -344,9 +316,6 @@ img {
 
 .hotel-sort-kind {
     color: var(--text-color);
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 18px;
     opacity: 0.3;
@@ -398,8 +367,6 @@ table.hotel-offers {
 
 .hotel-name {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -409,9 +376,6 @@ table.hotel-offers {
 .hotel-kind,
 .hotel-price {
     color: var(--gray-text-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
@@ -424,9 +388,6 @@ table.hotel-offers {
 .hotel-rate {
     color: var(--rate-text-color);
     background: var(--rate-background-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
@@ -438,8 +399,6 @@ table.hotel-offers {
 .contacts a {
     color: var(--text-color);
     background-color: var(--background-color);
-    font-family: "PT Sans";
-    font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -456,9 +415,6 @@ table.hotel-offers {
 
 .htmlacademy {
     color: var(--text-color);
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
