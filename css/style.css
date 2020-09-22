@@ -57,6 +57,11 @@ img {
     background-color: var(--background-color);
 }
 
+.main-header-logo {
+    z-index: 1;
+    text-align: center;
+}
+
 /* навишация по сайту */
 
 .site-navigation li {
@@ -85,7 +90,9 @@ img {
 }
 
 .container {
-    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: /*55px*/ 509px /*57px*/ 216px 256px 340px 256px 256px 290px 484px /*120px*/;
 }
 
 .invisible-header {
@@ -95,16 +102,144 @@ img {
 /* main page */
 
 .main-photo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: #000 url("../img/sedona-main-photo.jpg") no-repeat;
+    background-position: center -80px;
+}
+
+.img-text-main-photo
+{
     text-align: center;
+    padding-top: 80px;
+}
+
+.shape-under-main-photo
+{
+    padding-bottom: 13px;
+}
+
+.intro {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .city-description {
+    padding-top: 21px;
     color: var(--text-color);
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.primary-sight-text-box-1
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.primary-sight-text-box-1-picture
+{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.primary-sight-text-box-1-picture img
+{
+    width: 800px;
+    height: 256px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.feature-1
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.feature-2
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.feature-3
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.primary-sight-text-box-2
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.primary-sight-text-box-2-picture
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.secondary-sight-text-box-3
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.secondary-sight-text-box-4
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.secondary-sight-text-box-5
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.hotel-search-intro
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.map
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 9;
 }
 
 .sight-intro {
@@ -116,6 +251,13 @@ img {
 
 .primary-sight-text-box {
     background-color: var(--light-blue-color);
+    display: table;
+    height: 100%;
+}
+
+.primary-sight-text-inline-box {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .primary-sight-header {
@@ -129,23 +271,6 @@ img {
 
 .primary-sight-description {
     color: var(--invert-text-color);
-    font-size: 21px;
-    line-height: 21px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.feature-header {
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 21px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.feature-description {
-    color: var(--dark-gray-color);
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
@@ -154,6 +279,13 @@ img {
 
 .secondary-sight-text-box {
     background-color: var(--light-gray-color);
+    display: table;
+    height: 100%;
+}
+
+.secondary-sight-text-inline-box {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .secondary-sight-header {
@@ -170,6 +302,64 @@ img {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.feature-inline-box
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.feature-icon {
+    padding-top: 60px;
+    display: table-cell;
+    margin: auto;
+    height: 45%;
+    box-sizing: border-box;
+}
+
+.feature-header {
+    height: 10%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.feature-description {
+    height: 45%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.feature-header-text {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.feature-description-text {
+    color: var(--dark-gray-color);
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.hotel-search-box
+{
+    display: none;
+}
+
+.hotel-search-intro-box {
+    padding-top: 30px;
+    height: 188px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .hotel-search-intro-header {
@@ -191,11 +381,27 @@ img {
 .hotel-search-header {
     color: var(--invert-text-color);
     background-color: var(--brown-color);
+    height: 102px;
+    width: 568px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0;
+    display: table;
+}
+
+.hotel-search-header-inline-box
+{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hotel-search-header-text button {
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
-    text-align: center;
 }
 
 .hotel-search-header-button
@@ -394,6 +600,10 @@ table.hotel-offers {
 }
 
 /* footer */
+
+.main-footer {
+    
+}
 
 .contacts,
 .contacts a {

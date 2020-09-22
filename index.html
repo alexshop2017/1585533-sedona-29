@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+  
   <body class="page-body">
+  
   <header class="main-header">
       <nav class="main-navigation">
-        <div class="main-header-logo"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></div>
+        <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></div>
         <ul class="site-navigation">
           <li><a class="site-navigation-button" href="">Информация</a></li>
           <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
@@ -24,105 +26,153 @@
     
     <h1 class="invisible-header">Седона</h1>
 
-    <div class="main-photo"><img src="https://via.placeholder.com/1200x509" width="1200" height="509" alt="Седона"></div>
-    <p class="city-description">Седона - Небольшой городок в Аризоне,<br>Заслуживающий большего!</p>
-    <p class="sight-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
+    <div class="main-photo">
+      <div class="img-text-main-photo">
+        <img  src="img/sedona-over-main-photo-text.svg" alt="HouseLogo">
+      </div>
+      <div class="shape-under-main-photo"></div>
+        <img src="img/shape-under-main-photo.svg" alt="HouseLogo">
+      </div>
+    </div>
+    
+    <section class="intro">
+      <p class="city-description">Седона - Небольшой городок в Аризоне,<br>Заслуживающий большего!<br>&nbsp</p>
+      <p class="sight-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </section>
 
     <!--первая причина-->
-    <section class="primary-sight-text-box">
-      <h3 class="primary-sight-header">Настоящий городок</h3>
-      <div class="primary-sight-description">
-        <p>- №1 -</p>
-        <p>Седона - не аттракцион для туристов, там<br>
-          течёт своя жизнь
-        </p>
+    <div class="primary-sight-text-box primary-sight-text-box-1">
+      <div class="primary-sight-text-inline-box">
+          <h3 class="primary-sight-header">Настоящий<br>городок</h3>
+        <div class="primary-sight-description">
+          <p>- №1 -</p>
+          <p>Седона - не аттракцион для туристов, там<br>
+            течёт своя жизнь
+          </p>
+        </div>
       </div>
-      <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Фото1">
-    </section>
+    </div>
+    <div class="primary-sight-text-box-1-picture">
+      <img src="img/sedona1-photo.jpg" width="800" height="256" alt="Фото1">
+    </div>
 
-    <section class="feature">
-      <div>
-        <img class="feature-icon" src="https://via.placeholder.com/75x72" width="75" height="72" alt="HouseLogo">  
-        <p class="feature-header">Жильё</p>
-        <p class="feature-description">Рекомендуем пожить в настоящем<br>
-          мотеле, всё как в кино
-        </p>
+      <div class="feature-1">
+        <div class="feature-inline-box">
+          <img class="feature-icon" src="img/house.svg" width="75" height="72" alt="HouseLogo">  
+          <div class="feature-header">
+           <p class="feature-header-text">Жильё</p>
+          </div>
+          <div class="feature-description">
+            <p class="feature-description-text">Рекомендуем пожить в настоящем<br>
+            мотеле, всё как в кино
+          </p>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="FoodLogo">  
-        <p class="feature-header">Еда</p>
-        <p class="feature-description">Всегда заказывайте фирменный бургер,<br>
-          вы не разочаруетесь
-        </p>
+      
+      <div  class="feature-2">
+        <div class="feature-inline-box">
+          <img class="feature-icon" src="img/food.svg" width="75" height="72" alt="FoodLogo">  
+          <div class="feature-header">
+            <p class="feature-header-text">Еда</p>
+          </div>
+          <div class="feature-description">
+            <p class="feature-description-text">Всегда заказывайте фирменный бургер,<br>
+              вы не разочаруетесь
+            </p>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="https://via.placeholder.com/75x72" width="75" height="72" alt="PresentLogo">  
-        <p class="feature-header">Сувениры</p>
-        <p class="feature-description">Не только китайского, но и местного<br>
-          производства!
-        </p>
+      
+      <div class="feature-3">
+        <div class="feature-inline-box">
+          <img class="feature-icon" src="img/souvenir.svg" width="75" height="72" alt="PresentLogo">  
+          <div class="feature-header">
+            <p class="feature-header-text">Сувениры</p>
+          </div>
+          <div class="feature-description">
+            <p class="feature-description-text">Не только китайского, но и местного<br>
+              производства!
+          </div>
+          </p>
+        </div>
       </div>
-    </section>
 
     <!--вторая причина-->
-    <section class="primary-sight-text-box">
-      <img src="https://via.placeholder.com/800x256" width="800" height="256" alt="Фото2">
-      <h3 class="primary-sight-header">Там есть<br>Мост Дьявола</h3>
-      <div class="primary-sight-description">
-        <p>- №2 -</p>
-        <p>Да, по нему можно пройти! Если конечно<br>
-          вы осмелитесь
-        </p>
-      </div>
-    </section>
-
-    <section class="secondary-sight-text-box">
-      <div>
-        <h3 class="secondary-sight-header">Небольшая площадь</h3>
-        <div class="secondary-sight-description">
+    <div class="primary-sight-text-box-2-picture">
+      <img src="img/sedona2-photo.jpg" width="800" height="256" alt="Фото2">
+    </div>
+    <div class="primary-sight-text-box primary-sight-text-box-2">
+      <div class="primary-sight-text-inline-box">
+          <h3 class="primary-sight-header">Там есть<br>Мост Дьявола</h3>
+        <div class="primary-sight-description">
           <p>- №2 -</p>
+          <p>Да, по нему можно пройти! Если конечно<br>
+            вы осмелитесь
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary-sight-text-box-3 secondary-sight-text-box">
+      <div class="primary-sight-text-inline-box">
+        <h3 class="secondary-sight-header">Небольшая<br>площадь</h3>
+        <div class="secondary-sight-description">
+          <p>— №3 —</p>
           <p>Все достопримечательности<br>
             находятся очень близко
           </p>
         </div>
       </div>
-      <div>
-        <h3 class="secondary-sight-header">Красивая дорога</h3>
+    </div>
+  
+    <div class="secondary-sight-text-box-4 secondary-sight-text-box">
+      <div class="primary-sight-text-inline-box">
+        <h3 class="secondary-sight-header">Красивая<br>дорога</h3>
         <div class="secondary-sight-description">
-          <p>- №4 -</p>
+          <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем<br>
             не скучно!
           </p>
         </div>
       </div>
-      <div>
-        <h3 class="secondary-sight-header">Мало туристов</h3>
+    </div>
+
+    <div class="secondary-sight-text-box-5 secondary-sight-text-box">
+      <div class="primary-sight-text-inline-box">
+        <h3 class="secondary-sight-header">Мало<br>туристов</h3>
         <div class="secondary-sight-description">
-          <p>- №5 -</p>
+          <p>— №5 —</p>
           <p>Большинство едет в Гранд Каньон<br>
             и толпится там
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="hotel-search-intro">
-      <p class="hotel-search-intro-header"><span>Заинтересовались?</span></p>
-      <p class="hotel-search-intro-description">Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    </section>
+    <div class="hotel-search-intro">
+      <div class="hotel-search-intro-box">
+        <p class="hotel-search-intro-header"><span>Заинтересовались?</span></p>
+        <p class="hotel-search-intro-description">Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </div>
+      
+      <div class="hotel-search-header">
+        <div class="hotel-search-header-inline-box">
+          <h2 class="hotel-search-header-text"><button class="hotel-search-header-button brown-button">Поиск гостиницы в Седоне</button></h2>
+        </div>
+      </div>
+        <section class="hotel-search-box">
+          <section> <!--TODO: фоновая карта-->
+            <label>Дата заезда: <button id="date-from"></button></label>
+            <label>Дата выезда: <button id="date-to"></button></label>
+            <label>Взрослые:<button>-</button><output></output><button>+</button></label>
+            <label>Дети:<button>-</button><output></output><button>+</button></label>
+            <button class="button blue-button hotel-search-button">Найти</button>
+          </section>
+        </section>
+    </div>
 
-    <section class="hotel-search-box">
-      <h2 class="hotel-search-header"><button class="hotel-search-header-button brown-button">Поиск гостиницы в Седоне</button></h2>
-      <section> <!--TODO: фоновая карта-->
-        <label>Дата заезда: <button id="date-from"></button></label>
-        <label>Дата выезда: <button id="date-to"></button></label>
-        <label>Взрослые:<button>-</button><output></output><button>+</button></label>
-        <label>Дети:<button>-</button><output></output><button>+</button></label>
-        <button class="button blue-button hotel-search-button">Найти</button>
-      </section>
-    </section>
-    
     <section class="map">
       <img src="img/sedona-map.jpg" width="1200" height="474" alt="Карта расположения Седоны">
     </section>
