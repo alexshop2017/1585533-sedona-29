@@ -58,11 +58,17 @@ img {
 }
 
 .main-header-logo {
+    display: float;
     z-index: 1;
     text-align: center;
+    order: 1;
 }
 
 /* навишация по сайту */
+
+.main-navigation {
+    
+}
 
 .site-navigation li {
     list-style-type: none;
