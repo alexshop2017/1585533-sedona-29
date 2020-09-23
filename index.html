@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   
-  <body class="page-body">
+  <body class="page-body background-map">
   
   <header class="main-header">
-    <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></div>
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li><a class="site-navigation-button" href="">Информация</a></li>
-        <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
-        <li><a class="site-navigation-button" href="">Карта штата</a></li>
-        <li><a class="site-navigation-button" href="hotel.html">Гостиницы</a></li>
-      </ul>
-    </nav>
+    <div class="main-header-wrapper">
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a class="site-navigation-button" href="">Информация</a></li>
+          <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
+          <li><a class="site-navigation-button" href="">Карта штата</a></li>
+          <li><a class="site-navigation-button" href="hotel.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+      <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></div>
+    </div>
   </header>
   
   <main class="container">
@@ -43,7 +45,7 @@
     <!--первая причина-->
     <div class="primary-sight-text-box primary-sight-text-box-1">
       <div class="primary-sight-text-inline-box">
-          <h3 class="primary-sight-header">Настоящий<br>городок</h3>
+        <h3 class="primary-sight-header">Настоящий<br>городок</h3>
         <div class="primary-sight-description">
           <p>- №1 -</p>
           <p>Седона - не аттракцион для туристов, там<br>
@@ -172,27 +174,40 @@
           </section>
         </section>
     </div>
-
-    <section class="map">
-      <img src="img/sedona-map.jpg" width="1200" height="474" alt="Карта расположения Седоны">
-    </section>
+    <section class="map-area"></section>
   </main>
 
   <footer class="main-footer">
-    <section class="contacts">
-      <p>#VISITSEDONA</p>
-      <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
-    </section>
-    <section>
-      <ul class="social-network-links"> <!--TODO: фон для иконок-->
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
-      </ul>
-    </section>
-    <section class="htmlacademy">
-      <p>Website by<a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/115x41" width="115" height="41" alt="htmlacademy"></a></p>
-    </section>
+    <div class="footer-wrapper">
+      <div class="contacts-wrapper">
+        <div class="contacts">
+          <p>#VISITSEDONA</p>
+          <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+        </div>
+      </div>
+      <div class="social-network-links-wrapper">
+        <div class="social-network-icons-wrapper">
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#">
+                <img src="img/twitter.svg" alt="twitter">
+              </a>
+            </div>
+          </div>
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box"><span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#"><img src="img/facebook.svg" alt="twitter"></a></div>
+          </div>
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box"><span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#"><img src="img/youtube.svg" alt="twitter"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="htmlacademy-wrapper">
+        <div class="htmlacademy">
+          <span class="htmlacademy-text">Website by </span><a href="https://htmlacademy.ru"><img src="img/htmlacademy-svg.svg" width="115" height="41" alt="htmlacademy"></a>
+        </div>
+      </div>
+    </div>
   </footer>
   </body>
 </html>
