@@ -25,22 +25,25 @@
   </header>
   
   <main class="container">
-    
-    <h1 class="invisible-header">Седона</h1>
+    <div class="main-grid">
 
-    <div class="main-photo">
-      <div class="img-text-main-photo">
-        <img  src="img/sedona-over-main-photo-text.svg" alt="HouseLogo">
+      <h1 class="invisible-header">Седона</h1>
+
+      <div class="main-photo-and-intro-section">
+        <div class="main-photo">
+          <div class="img-text-main-photo">
+            <img  src="img/sedona-over-main-photo-text.svg" alt="HouseLogo">
+          </div>
+          <div class="shape-over-main-photo">
+            <img src="img/shape-over-main-photo.svg" alt="HouseLogo">
+          </div>
+        </div>
+        
+        <div class="intro">
+          <p class="city-description">Седона - Небольшой городок в Аризоне,<br>Заслуживающий большего!<br>&nbsp</p>
+          <p class="sight-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
       </div>
-      <div class="shape-under-main-photo"></div>
-        <img src="img/shape-under-main-photo.svg" alt="HouseLogo">
-      </div>
-    </div>
-    
-    <section class="intro">
-      <p class="city-description">Седона - Небольшой городок в Аризоне,<br>Заслуживающий большего!<br>&nbsp</p>
-      <p class="sight-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-    </section>
 
     <!--первая причина-->
     <div class="primary-sight-text-box primary-sight-text-box-1">
@@ -54,13 +57,17 @@
         </div>
       </div>
     </div>
-    <div class="primary-sight-text-box-1-picture">
-      <img src="img/sedona1-photo.jpg" width="800" height="256" alt="Фото1">
+    <div class="primary-sight-text-box-1-photo primary-sight-text-box-photo">
+      <img class="primary-sight-photo" src="img/sedona1-photo.jpg" width="800" height="256" alt="Фото1">
     </div>
 
-      <div class="feature-1">
+      <!--TODO: выровнять блоки по вертикали-->
+
+      <div class="feature-1 feature">
         <div class="feature-inline-box">
-          <img class="feature-icon" src="img/house.svg" width="75" height="72" alt="HouseLogo">  
+          <div>
+            <img class="feature-icon" src="img/house.svg" width="75" height="72" alt="HouseLogo">
+          </div>
           <div class="feature-header">
            <p class="feature-header-text">Жильё</p>
           </div>
@@ -72,7 +79,7 @@
         </div>
       </div>
       
-      <div  class="feature-2">
+      <div  class="feature-2 feature">
         <div class="feature-inline-box">
           <img class="feature-icon" src="img/food.svg" width="75" height="72" alt="FoodLogo">  
           <div class="feature-header">
@@ -86,7 +93,7 @@
         </div>
       </div>
       
-      <div class="feature-3">
+      <div class="feature-3 feature">
         <div class="feature-inline-box">
           <img class="feature-icon" src="img/souvenir.svg" width="75" height="72" alt="PresentLogo">  
           <div class="feature-header">
@@ -101,7 +108,7 @@
       </div>
 
     <!--вторая причина-->
-    <div class="primary-sight-text-box-2-picture">
+    <div class="primary-sight-text-box-2-photo primary-sight-text-box-photo">
       <img src="img/sedona2-photo.jpg" width="800" height="256" alt="Фото2">
     </div>
     <div class="primary-sight-text-box primary-sight-text-box-2">
@@ -117,7 +124,7 @@
     </div>
 
     <div class="secondary-sight-text-box-3 secondary-sight-text-box">
-      <div class="primary-sight-text-inline-box">
+      <div class="secondary-sight-text-inline-box">
         <h3 class="secondary-sight-header">Небольшая<br>площадь</h3>
         <div class="secondary-sight-description">
           <p>— №3 —</p>
@@ -129,7 +136,7 @@
     </div>
   
     <div class="secondary-sight-text-box-4 secondary-sight-text-box">
-      <div class="primary-sight-text-inline-box">
+      <div class="secondary-sight-text-inline-box">
         <h3 class="secondary-sight-header">Красивая<br>дорога</h3>
         <div class="secondary-sight-description">
           <p>— №4 —</p>
@@ -141,7 +148,7 @@
     </div>
 
     <div class="secondary-sight-text-box-5 secondary-sight-text-box">
-      <div class="primary-sight-text-inline-box">
+      <div class="secondary-sight-text-inline-box">
         <h3 class="secondary-sight-header">Мало<br>туристов</h3>
         <div class="secondary-sight-description">
           <p>— №5 —</p>
@@ -152,7 +159,7 @@
       </div>
     </div>
 
-    <div class="hotel-search-intro">
+    <div class="hotel-search-and-map-section">
       <div class="hotel-search-intro-box">
         <p class="hotel-search-intro-header"><span>Заинтересовались?</span></p>
         <p class="hotel-search-intro-description">Укажите предполагаемые даты поездки,<br>
@@ -174,7 +181,9 @@
           </section>
         </section>
     </div>
+    <!-- TODO: сделать карту как бекграунд который начинается в main и заканчивается в footer. Как сделать непонятно -->
     <section class="map-area"></section>
+  </div>
   </main>
 
   <footer class="main-footer">
@@ -189,16 +198,27 @@
         <div class="social-network-icons-wrapper">
           <div class="social-network-icon-box-wrapper">
             <div class="social-network-icon-box">
-              <span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
                 <img src="img/twitter.svg" alt="twitter">
               </a>
             </div>
           </div>
           <div class="social-network-icon-box-wrapper">
-            <div class="social-network-icon-box"><span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#"><img src="img/facebook.svg" alt="twitter"></a></div>
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
+                <img src="img/facebook.svg" alt="twitter">
+              </a>
+            </div>
           </div>
           <div class="social-network-icon-box-wrapper">
-            <div class="social-network-icon-box"><span class="social-network-icon-prefix"></span><a class="social-button blue-button" href="#"><img src="img/youtube.svg" alt="twitter"></a></div>
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
+                <img src="img/youtube.svg" alt="twitter">
+              </a>
+            </div>
           </div>
         </div>
       </div>
