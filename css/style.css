@@ -200,22 +200,12 @@ div.main-header-wrapper {
     background-size: cover;
 }
 
-.feature-1
+.feature-row
 {
+    display: flex;
     grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.feature-2
-{
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.feature-3
-{
-    grid-column-start: 3;
     grid-column-end: 4;
+    justify-content: space-around;
 }
 
 .primary-sight-text-box-2
@@ -330,18 +320,8 @@ div.main-header-wrapper {
 }
 
 .feature-icon {
-    padding-top: 30px;
-    height: 90px;
     display: table-cell;
     margin: auto;
-}
-
-.feature-header {
-    height: 40px;
-}
-
-.feature-description {
-    height: 40px;
 }
 
 .feature-header-text {
@@ -620,7 +600,7 @@ table.hotel-offers {
 .map-area {
     grid-column-start: 1;
     grid-column-end: 4;
-    background-image: url(../img/sedona-map.png) no-repeat;
+    background-image: url(../img/sedona-map.png); /* избавиться от повтора карты в футере */
     height: 474px;
     width: 1200px;
 }
