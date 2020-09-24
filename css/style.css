@@ -620,7 +620,7 @@ table.hotel-offers {
 .map-area {
     grid-column-start: 1;
     grid-column-end: 4;
-    background-image: url(../img/sedona-map.png);
+    background-image: url(../img/sedona-map.png) no-repeat;
     height: 474px;
     width: 1200px;
 }
