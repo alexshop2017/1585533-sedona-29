@@ -617,6 +617,14 @@ table.hotel-offers {
     text-transform: uppercase;
 }
 
+.map-area {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-image: url(../img/sedona-map.png);
+    height: 474px;
+    width: 1200px;
+}
+
 /* footer */
 
 .main-footer {
