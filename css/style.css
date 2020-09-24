@@ -206,6 +206,7 @@ div.main-header-wrapper {
     grid-column-start: 1;
     grid-column-end: 4;
     justify-content: space-around;
+    height: 256px;
 }
 
 .primary-sight-text-box-2
