@@ -123,7 +123,7 @@ div.main-header-wrapper {
 
 .container {
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -613,9 +613,9 @@ table.hotel-offers {
 }
 
 .map-area {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    background-image: url(../img/sedona-map.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 3 / 4;
     height: 474px;
     width: 1200px;
 }
@@ -623,10 +623,11 @@ table.hotel-offers {
 /* footer */
 
 .main-footer {
-    grid-row-start: 3;
+    grid-row: 4 / 5;
     grid-column-start: 2;
     grid-column-end: 3;
     background-color: var(--footer-background-color);
+    height: 120px;
 }
 
 .footer-wrapper {
