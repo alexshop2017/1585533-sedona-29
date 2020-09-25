@@ -447,12 +447,6 @@ div.main-header-wrapper {
     background-color: var(--dark-blue-color);
 }
 
-.background-map {
-    background: url("../img/sedona-map.png") no-repeat;
-    background-position-x: center;
-    background-position-y: 2179px;
-}
-
 /* hotel page */
 
 /* параметры поиска отелей */
