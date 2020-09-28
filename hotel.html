@@ -10,121 +10,120 @@
   
   <body class="page-body">
   
-  <header class="main-header">
-      <nav class="main-navigation">
-        <div class="main-header-logo"><img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип"></div>
-        <ul class="site-navigation">
-          <li><a class="site-navigation-button" href="">Информация</a></li>
-          <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
-          <li><a class="site-navigation-button" href="">Карта штата</a></li>
-          <li><span class="site-navigation-button-selected">Гостиницы</span></li>
-        </ul>
-      </nav>
+  <header class="hotel-header">
+    <nav class="site-navigation">
+      <ul class="site-navigation-list">
+        <li><a class="site-navigation-button" href="">Информация</a></li>
+        <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
+        <li><a class="site-navigation-button" href="">Карта штата</a></li>
+        <li><span class="site-navigation-button-selected">Гостиницы</span></li>
+      </ul>
+    </nav>
+    <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></div>
   </header>
 
-  <main class="container">
+  <main class="hotel-container">
 
     <h1 class="invisible-header">Отели в Седоне</h1>
 
     <!-- верхняя секция -->
-    <section class="hotel-filter-box"> <!-- фоновая картинка через стиль? -->
+    <section class="hotel-filter-section">
       <form>
-        <!-- левая секция -->
-        <div>
-            <fieldset>
-                <legend class="hotel-filter-legend">Инфраструктура:</legend>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Бассейн</input></div>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Парковка</input></div>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input></div>
+        <div class="hotel-filter-wrapper">
+          <div class="hotel-filters-infrustructure-wrapper">
+            <fieldset class="hotel-filters-fieldset hotel-filters-infrustructure">
+              <legend class="hotel-filter-legend">Инфраструктура:</legend>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Бассейн</input></div>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Парковка</input></div>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input></div>
             </fieldset>
-            <fieldset>
-                <legend class="hotel-filter-legend">Тип жилья:</legend>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Гостиница</input></div>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Мотель</input></div>
-                <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input></div>
+          </div>
+          <div class="hotel-filters-kind-wrapper">
+            <fieldset class="hotel-filters-fieldset hotel-filters-kind">
+              <legend class="hotel-filter-legend">Тип жилья:</legend>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Гостиница</input></div>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Мотель</input></div>
+              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input></div>
             </fieldset>
-        </div>
-        <!-- правая секция -->
-        <div>
-           <fieldset>
+          </div>
+          <div class="hotel-filters-price-wrapper">
+            <fieldset class="hotel-filters-fieldset">
               <legend class="hotel-filter-legend">Стоимость в сутки:</legend>
               <div class="hotel-filter-input">От: <input type="number"></input></div>
               <div class="hotel-filter-input">До: <input type="number"></input></div>
               <input class="hotel-filter-range" type="range"></input>
             </fieldset>
             <button class="hotel-filter-button">Показать</button>
+          </div>
         </div>
       </form>
     </section>
+    
     <section class="hotel-box">
         <!-- сортировка отелей -->
-        <div class="hotel-sort-box">
+        <div class="hotel-sort-box-wrapper">
+          <div class="hotel-sort-box">
             <span class="hotel-count">Найдено:<output class="hotel-count-output">3</output></span>
             <span class="hotel-sort-legend">Сортировка:</span>
-            <ol>
+            <ol class="hotel-sort-kind-list">
               <li class="hotel-sort-kind">По цене</li>
               <li class="hotel-sort-kind">По типу</li>
               <li class="hotel-sort-kind">По рейтингу</li>
             </ol>
-            <section>
-              <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по возрастанию"></button>
-              <button class="hotel-sort-order-button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка по убыванию"></button>
-            </section>
+            <div class="hotel-sort-order-buttons">
+              <button class="hotel-sort-order-button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию"></button>
+              <button class="hotel-sort-order-button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></button>
+            </div>
+          </div>
         </div>
         <!-- номера отелей -->
-        <!-- временно сделал через таблицу (чтобы задать стили), потом переделаю-->
+        <!-- временно сделал через таблицу (чтобы задать стили), потом переделаю на флексы-->
         <table class="hotel-offers">
             <tr class="hotel-offer">
-              <td>
+              <td class="hotel-preview-photo">
                 <div class="hotel-preview-photo"><img src="img/amara-resort-spa-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
               </td>
-              <td>
+              <td class="table-description">
                 <h2 class="hotel-name">Amara Resort & Spa</h2>
                 <p class="hotel-kind">Гостиница</p>
                 <p class="hotel-price">От 4000 Р.</p>
-              </td>
-              <td>
                 <button class="blue-button hotel-details-button">Подробнее</button>
                 <button class="brown-button hotel-booking-button">Забронировать</button>
               </td>
-              <td>
-                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
-                <div class="hotel-rate">Рейтинг: 8,5</div> <!--Как быть с локализацией? Разделитель целых и дробных частей-->
+              <td class="hotel-rate-column">
+                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
+                <div class="hotel-rate">Рейтинг: 8,5</div>
               </td>
             </tr>
             <tr class="hotel-offer">
-              <td>
+              <td class="hotel-preview-photo">
                 <div class="hotel-preview-photo"><img src="img/desert-quail-inn-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
               </td>
-              <td>
+              <td class="table-description">
                 <h2 class="hotel-name">Desert Quail Inn</h2>
                 <p class="hotel-kind">Мотель</p>
                 <p class="hotel-price">От 3000 Р.</p>
-              </td>
-              <td>
                 <button class="blue-button hotel-details-button">Подробнее</button>
                 <button class="brown-button hotel-booking-button">Забронировать</button>
               </td>
-              <td>
-                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
+              <td class="hotel-rate-column">
+                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
                 <div class="hotel-rate">Рейтинг: 8,9</div>
               </td>
             </tr>
             <tr class="hotel-offer">
-              <td>
+              <td class="hotel-preview-photo">
                 <div class="hotel-preview-photo"><img src="img/villas-at-poco-diablo-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
               </td>
-              <td>
+              <td class="table-description">
                 <h2 class="hotel-name">Villas at Poco Diablo</h2>
                 <p class="hotel-kind">Апартаменты</p>
                 <p class="hotel-price">От 2000 Р.</p>
-              </td>
-              <td>
                 <button class="blue-button hotel-details-button">Подробнее</button>
                 <button class="brown-button hotel-booking-button">Забронировать</button>
               </td>
-              <td>
-                <div class="hotel-rate-stars"></div> <!--звездочки пока не добавлял-->
+              <td class="hotel-rate-column">
+                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"></div>
                 <div class="hotel-rate">Рейтинг: 9,2</div>
               </td>
             </tr>
@@ -132,21 +131,49 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <section class="contacts">
-      <p>#VISITSEDONA</p>
-      <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
-    </section>
-    <section>
-      <ul class="social-network-links"> <!--TODO: фон для иконок-->
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/17x15" width="46" height="48" alt="twitter"></a></li>
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/12x22" width="46" height="48" alt="facebook"></a></li>
-        <li><a class="social-button blue-button" href="#"><img src="https://via.placeholder.com/20x16" width="46" height="48" alt="youtube"></a></li>
-      </ul>
-    </section>
-    <section class="htmlacademy">
-      <p>Website by<a href="https://htmlacademy.ru"><img src="https://via.placeholder.com/115x41" width="115" height="41" alt="htmlacademy"></a></p>
-    </section>
+  <footer class="hotel-footer">
+    <div class="footer-wrapper">
+      <div class="contacts-wrapper">
+        <div class="contacts">
+          <p>#VISITSEDONA</p>
+          <p class="contact-phone">Телефон:<a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+        </div>
+      </div>
+      <div class="social-network-links-wrapper">
+        <div class="social-network-icons-wrapper">
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
+                <img src="img/twitter.svg" alt="twitter">
+              </a>
+            </div>
+          </div>
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
+                <img src="img/facebook.svg" alt="twitter">
+              </a>
+            </div>
+          </div>
+          <div class="social-network-icon-box-wrapper">
+            <div class="social-network-icon-box">
+              <span class="social-network-icon-prefix"></span>
+              <a class="social-button blue-button" href="#">
+                <img src="img/youtube.svg" alt="twitter">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="htmlacademy-wrapper">
+        <div class="htmlacademy">
+          <span class="htmlacademy-text">Website by </span><a href="https://htmlacademy.ru"><img src="img/htmlacademy-svg.svg" width="115" height="41" alt="htmlacademy"></a>
+        </div>
+      </div>
+    </div>
   </footer>
+
   </body>
 </html>
