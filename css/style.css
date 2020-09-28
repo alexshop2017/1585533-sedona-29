@@ -458,32 +458,6 @@ img {
 
 /* параметры поиска отелей */
 
-.hotel-header {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding-top: 0;
-    margin-top: 0;
-    background-color: var(--background-color);
-}
-
-.hotel-container {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.hotel-footer {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-color: var(--footer-background-color);
-    height: 120px;
-}
-
 .hotel-filter-section {
     width: 1200px;
     height: 217px;
