@@ -66,9 +66,32 @@ img {
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    padding-top: 0;
     margin-top: 0;
     background-color: var(--background-color);
+    padding: 0 113px;
+}
+
+/* навигация по сайту */
+
+.site-navigation {
+    display: flex;
+    width: 100%;
+    height: 56px;
+}
+
+.site-navigation-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.site-navigation-list li {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .main-header-logo-wrapper {
@@ -89,18 +112,8 @@ img {
     margin: auto;
 }
 
-/* навигация по сайту */
-
-.site-navigation {
-    position: absolute;
-    /*
-    padding: 0 113px;
-    */
-}
-
-.site-navigation-list li {
-    list-style-type: none;
-    display: inline;
+.site-navigation-dummy {
+    width: 60px;
 }
 
 .site-navigation-list,
@@ -110,6 +123,18 @@ img {
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
+}
+
+.site-navigation-list li {
+    display: flex;
+}
+
+.site-navigation-button-left {
+    justify-content: flex-start;
+}
+
+.site-navigation-button-right {
+    justify-content: flex-end;
 }
 
 .site-navigation-button-selected {
@@ -162,7 +187,7 @@ img {
 
 .shape-over-main-photo
 {
-    padding-top: 13px; /* TODO: привязать фигуру к нижней части области с фоновой картинкой */
+    padding-top: 13px;
 }
 
 .shape-over-main-photo img {
@@ -330,20 +355,43 @@ img {
 }
 
 .feature {
-   display: table;
-   height: 230px;
+   display: flex;
+   flex-direction: column;
+   height: 330px;
    width: 400px;
+   margin: auto;
+   align-items: center;
+   padding: 0;
+   margin: 0;
 }
 
-.feature-inline-box
-{
-    display: table-cell;
-    vertical-align: middle;
+.feature-icon-wrapper {
+    height: 130px;
+    padding: 0;
+    margin: 0;
+    outline-offset: -1px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8px;
+ }
+
+.feature-header-wrapper {
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    outline-offset: -1px;
+    display: flex;
+    align-items: center;
+    padding-top: -4px;
 }
 
-.feature-icon {
-    display: table-cell;
-    margin: auto;
+.feature-description-wrapper {
+    height: 130px;
+    padding: 0;
+    margin: 0;
+    outline-offset: -1px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .feature-header-text {
@@ -420,6 +468,8 @@ img {
 
 .hotel-search-header-button
 {
+    color: var(--invert-text-color);
+    background-color: transparent;
     border: none;
 }
 
@@ -710,19 +760,16 @@ img {
 }
 
 .footer-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 300px 1fr;
+    display: flex;
+    padding: 0 113px;
 }
 
 .contacts-wrapper {
     display: table;
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    width: 325px;
 }
 
 .contacts {
-    display: table-cell;
     text-align: center;
 }
 
@@ -736,38 +783,22 @@ img {
 }
 
 .social-network-links-wrapper {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: table;
-    vertical-align: middle;
-    height: 100%;
-}
-
-.social-network-icons-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.social-network-icon-box-wrapper {
-    display: inline-block;
+    width: 324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-network-icon-box {
     width: 46px;
     height: 48px;
     background-color: var(--light-blue-color);
-    display: table;
-}
-
-.social-network-icon-prefix {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.social-network-icon-box img {
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .social-network-icon-box:hover {
@@ -778,17 +809,25 @@ img {
     background-color: var(--dark-blue-color);
 }
 
+a.social-button {
+    line-height: 0px;
+}
+
+.twitter-button {
+    width:17px;
+    height:15px;
+}
+
 .htmlacademy-wrapper
 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    display: table;
-    height: 100%;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.htmlacademy
 {
-    display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
@@ -804,10 +843,10 @@ div.htmlacademy
     text-transform: uppercase;
 }
 
-.htmlacademy:hover path {
+.htmlacademy:hover a {
     fill: var(--light-blue-color);
 }
 
-.htmlacademy:active path {
+.htmlacademy:active a {
     fill: var(--htmlacademy-gray-color);
 }

@@ -13,20 +13,21 @@
   <header class="main-header">
     <nav class="site-navigation">
       <ul class="site-navigation-list">
-        <li><a class="site-navigation-button" href="">Информация</a></li>
-        <li><a class="site-navigation-button" href="">Фото и Видео</a></li>
-        <li><a class="site-navigation-button" href="">Карта штата</a></li>
-        <li><a class="site-navigation-button" href="hotel.html">Гостиницы</a></li>
+        <li class="site-navigation-button-left"><a class="site-navigation-button" href=""><span>Информация</span></a></li>
+        <li class="site-navigation-button-left"><a class="site-navigation-button " href=""><span>Фото и Видео</span></a></li>
+        <li class="site-navigation-dummy"></li>
+        <li class="site-navigation-button-right"><a class="site-navigation-button" href=""><span>Карта штата</span></a></li>
+        <li class="site-navigation-button-right"><a class="site-navigation-button" href="hotel.html"><span>Гостиницы</span></a></li>
       </ul>
     </nav>
-    <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></div>
+    <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></div>
   </header>
   
   <main class="container">
+
+    <h1 class="invisible-header">Седона</h1>
+
     <div class="main-grid">
-
-      <h1 class="invisible-header">Седона</h1>
-
       <div class="main-photo-and-intro-section">
         <div class="main-photo">
           <div class="img-text-main-photo">
@@ -59,48 +60,44 @@
       <img class="primary-sight-photo" src="img/sedona1-photo.jpg" width="800" height="256" alt="Фото1">
     </div>
 
-      <!--TODO: выровнять блоки по вертикали-->
-
       <div class="feature-1 feature">
-        <div class="feature-inline-box">
-          <div>
-            <img class="feature-icon" src="img/house.svg" width="75" height="72" alt="HouseLogo">
-          </div>
-          <div class="feature-header">
-           <p class="feature-header-text">Жильё</p>
-          </div>
-          <div class="feature-description">
-            <p class="feature-description-text">Рекомендуем пожить в настоящем<br>
-            мотеле, всё как в кино
+        <div class="feature-icon-wrapper">
+          <img class="feature-icon" src="img/house.svg" width="75" height="72" alt="HouseLogo">
+        </div>
+        <div class="feature-header-wrapper">
+          <p class="feature-header-text">Жильё</p>
+        </div>
+        <div class="feature-description-wrapper">
+          <p class="feature-description-text">Рекомендуем пожить в настоящем<br>
+          мотеле, всё как в кино!
           </p>
-          </div>
         </div>
       </div>
       
       <div  class="feature-2 feature">
-        <div class="feature-inline-box">
+        <div class="feature-icon-wrapper">
           <img class="feature-icon" src="img/food.svg" width="75" height="72" alt="FoodLogo">  
-          <div class="feature-header">
-            <p class="feature-header-text">Еда</p>
-          </div>
-          <div class="feature-description">
-            <p class="feature-description-text">Всегда заказывайте фирменный бургер,<br>
-              вы не разочаруетесь
-            </p>
-          </div>
+        </div>
+        <div class="feature-header-wrapper">
+          <p class="feature-header-text">Еда</p>
+        </div>
+        <div class="feature-description-wrapper">
+          <p class="feature-description-text">Всегда заказывайте фирменный бургер,<br>
+            вы не разочаруетесь!
+          </p>
         </div>
       </div>
       
       <div class="feature-3 feature">
-        <div class="feature-inline-box">
+        <div class="feature-icon-wrapper">
           <img class="feature-icon" src="img/souvenir.svg" width="75" height="72" alt="PresentLogo">  
-          <div class="feature-header">
-            <p class="feature-header-text">Сувениры</p>
-          </div>
-          <div class="feature-description">
-            <p class="feature-description-text">Не только китайского, но и местного<br>
-              производства!
-          </div>
+        </div>
+        <div class="feature-header-wrapper">
+          <p class="feature-header-text">Сувениры</p>
+        </div>
+        <div class="feature-description-wrapper">
+          <p class="feature-description-text">Не только китайского, но и местного<br>
+            производства!
           </p>
         </div>
       </div>
@@ -166,7 +163,7 @@
       
       <div class="hotel-search-header">
         <div class="hotel-search-header-inline-box">
-          <h2 class="hotel-search-header-text"><button class="hotel-search-header-button brown-button">Поиск гостиницы в Седоне</button></h2>
+          <h2 class="hotel-search-header-text"><button class="hotel-search-header-button">Поиск гостиницы в Седоне</button></h2>
         </div>
       </div>
         <section class="hotel-search-box">
@@ -192,31 +189,20 @@
         </div>
       </div>
       <div class="social-network-links-wrapper">
-        <div class="social-network-icons-wrapper">
-          <div class="social-network-icon-box-wrapper">
-            <div class="social-network-icon-box">
-              <span class="social-network-icon-prefix"></span>
-              <a class="social-button blue-button" href="#">
-                <img src="img/twitter.svg" alt="twitter">
-              </a>
-            </div>
-          </div>
-          <div class="social-network-icon-box-wrapper">
-            <div class="social-network-icon-box">
-              <span class="social-network-icon-prefix"></span>
-              <a class="social-button blue-button" href="#">
-                <img src="img/facebook.svg" alt="twitter">
-              </a>
-            </div>
-          </div>
-          <div class="social-network-icon-box-wrapper">
-            <div class="social-network-icon-box">
-              <span class="social-network-icon-prefix"></span>
-              <a class="social-button blue-button" href="#">
-                <img src="img/youtube.svg" alt="twitter">
-              </a>
-            </div>
-          </div>
+        <div class="social-network-icon-box">
+          <a class="social-button" href="#">
+            <img src="img/twitter.png" width=17 height=15 class="twitter-button" alt="twitter">
+          </a>
+        </div>
+        <div class="social-network-icon-box">
+          <a class="social-button" href="#">
+            <img src="img/facebook.png" width=12 height=22 alt="twitter">
+          </a>
+        </div>
+        <div class="social-network-icon-box">
+          <a class="social-button" href="#">
+            <img src="img/youtube.png" width=20 height=16 alt="twitter">
+          </a>
         </div>
       </div>
       <div class="htmlacademy-wrapper">
@@ -226,5 +212,6 @@
       </div>
     </div>
   </footer>
+
   </body>
 </html>
