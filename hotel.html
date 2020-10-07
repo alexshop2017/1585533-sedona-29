@@ -14,47 +14,81 @@
     <nav class="site-navigation">
       <ul class="site-navigation-list">
         <li class="site-navigation-button-left"><a class="site-navigation-button" href=""><span>Информация</span></a></li>
-        <li class="site-navigation-button-left"><a class="site-navigation-button " href=""><span>Фото и Видео</span></a></li>
+        <li class="site-navigation-button-left"><a class="site-navigation-button" href=""><span>Фото и Видео</span></a></li>
         <li class="site-navigation-dummy"></li>
         <li class="site-navigation-button-right"><a class="site-navigation-button" href=""><span>Карта штата</span></a></li>
         <li class="site-navigation-button-right"><span class="site-navigation-button-selected">Гостиницы</span></a></li>
       </ul>
     </nav>
-    <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></div>
+     <div class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></div>
   </header>
 
   <main class="container">
 
-    <h1 class="invisible-header">Отели в Седоне</h1>
+    <h1 class="visually-hidden">Отели в Седоне</h1>
 
     <!-- верхняя секция -->
     <section class="hotel-filter-section">
-      <form>
-        <div class="hotel-filter-wrapper">
-          <div class="hotel-filters-infrustructure-wrapper">
-            <fieldset class="hotel-filters-fieldset hotel-filters-infrustructure">
-              <legend class="hotel-filter-legend">Инфраструктура:</legend>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Бассейн</input></div>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Парковка</input></div>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Wi-Fi</input></div>
+      <form class="hotel-filter-form">
+        <fieldset class="hotel-filters-fieldset hotel-filters-features">
+          <legend class="hotel-filter-legend">Инфраструктура:</legend>
+          <ul>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-pool"></input>
+              <label for="hotel-filter-pool">Бассейн</label>
+            </li>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-parking"></input>
+              <label for="hotel-filter-parking">Парковка</label>
+            </li>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-wifi"></input>
+              <label for="hotel-filter-wifi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="hotel-filters-fieldset hotel-filters-kind">
+          <legend class="hotel-filter-legend">Тип жилья:</legend>
+          <ul>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-hotel"></input>
+              <label for="hotel-filter-hotel">Гостиница</label>
+            </li>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-motel"></input>
+              <label for="hotel-filter-motel">Мотель</label>
+            </li>
+            <li class="hotel-filter-option hotel-filter-checkbox">
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-apartments"></input>
+              <label for="hotel-filter-apartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="hotel-filters-price-wrapper">
+          <div class="hotel-filters-price-inline-wrapper">
+            <fieldset class="hotel-filters-fieldset hotel-filters-price">
+              <legend class="hotel-filter-legend hotel-filter-price-legend">Стоимость в сутки (Р):</legend>
+              <table class="hotel-filter-price-inputs-wrapper">
+                <tr>
+                  <td class="hotel-filter-price-column">
+                    <label class="hotel-filter-price-label" for="hotel-filter-price-from">От</label>
+                    <input class="hotel-filter-price-input" type="number" id="hotel-filter-price-from" value="0"></input>
+                  </td>
+                  <td class="hotel-filter-price-column">
+                    <label class="hotel-filter-price-label" for="hotel-filter-price-to">До</label>
+                    <input class="hotel-filter-price-input" type="number" id="hotel-filter-price-to" value="3000"></input>
+                  </td>
+                </tr>
+              </table>
+              <div class="hotel-price-range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 80%; margin-left: 0%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
+              </div>
             </fieldset>
-          </div>
-          <div class="hotel-filters-kind-wrapper">
-            <fieldset class="hotel-filters-fieldset hotel-filters-kind">
-              <legend class="hotel-filter-legend">Тип жилья:</legend>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Гостиница</input></div>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Мотель</input></div>
-              <div class="hotel-filter-text"><input class="hotel-filter-checkbox" type="checkbox">Апартаменты</input></div>
-            </fieldset>
-          </div>
-          <div class="hotel-filters-price-wrapper">
-            <fieldset class="hotel-filters-fieldset">
-              <legend class="hotel-filter-legend">Стоимость в сутки:</legend>
-              <div class="hotel-filter-input">От: <input type="number"></input></div>
-              <div class="hotel-filter-input">До: <input type="number"></input></div>
-              <input class="hotel-filter-range" type="range"></input>
-            </fieldset>
-            <button class="hotel-filter-button">Показать</button>
+            <button class="hotel-filter-button-apply">Показать</button>
           </div>
         </div>
       </form>
