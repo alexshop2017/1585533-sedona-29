@@ -94,78 +94,104 @@
       </form>
     </section>
     
-    <section class="hotel-box">
-        <!-- сортировка отелей -->
-        <div class="hotel-sort-box-wrapper">
-          <div>
-            <label class="hotel-count-label" for="hotel-count-output">Найдено: </label>
-            <output class="hotel-count-output" id="hotel-count-output">3</output>
-          </div>
-          <div class="hotel-sort-kind-wrapper">
-            <label class="hotel-sort-legend">Сортировка:</label>
-            <ol class="hotel-sort-kind-list">
-              <li class="hotel-sort-kind">По цене</li>
-              <li class="hotel-sort-kind">По типу</li>
-              <li class="hotel-sort-kind">По рейтингу</li>
-            </ol>
-          </div>
-          <div class="hotel-sort-order-buttons">
-            <button class="hotel-sort-order-button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию"></button>
-            <button class="hotel-sort-order-button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></button>
-          </div>
+    <section class="hotel-sort-section">
+      <!-- сортировка отелей -->
+      <div class="hotel-sort-box-wrapper">
+        <div>
+          <label class="hotel-count-label" for="hotel-count-output">Найдено: </label>
+          <output class="hotel-count-output" id="hotel-count-output">3</output>
         </div>
-        <!-- номера отелей -->
-        <!-- временно сделал через таблицу (чтобы задать стили), потом переделаю на флексы-->
-        <table class="hotel-offers">
-            <tr class="hotel-offer">
-              <td class="hotel-preview-photo">
-                <div class="hotel-preview-photo"><img src="img/amara-resort-spa-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
-              </td>
-              <td class="table-description">
-                <h2 class="hotel-name">Amara Resort & Spa</h2>
-                <p class="hotel-kind">Гостиница</p>
-                <p class="hotel-price">От 4000 Р.</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
-                <button class="brown-button hotel-booking-button">Забронировать</button>
-              </td>
-              <td class="hotel-rate-column">
-                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
-                <div class="hotel-rate">Рейтинг: 8,5</div>
-              </td>
-            </tr>
-            <tr class="hotel-offer">
-              <td class="hotel-preview-photo">
-                <div class="hotel-preview-photo"><img src="img/desert-quail-inn-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
-              </td>
-              <td class="table-description">
-                <h2 class="hotel-name">Desert Quail Inn</h2>
-                <p class="hotel-kind">Мотель</p>
-                <p class="hotel-price">От 3000 Р.</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
-                <button class="brown-button hotel-booking-button">Забронировать</button>
-              </td>
-              <td class="hotel-rate-column">
-                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
-                <div class="hotel-rate">Рейтинг: 8,9</div>
-              </td>
-            </tr>
-            <tr class="hotel-offer">
-              <td class="hotel-preview-photo">
-                <div class="hotel-preview-photo"><img src="img/villas-at-poco-diablo-preview-photo.jpg" width="135" height="90" alt="фото отеля"></div>
-              </td>
-              <td class="table-description">
-                <h2 class="hotel-name">Villas at Poco Diablo</h2>
-                <p class="hotel-kind">Апартаменты</p>
-                <p class="hotel-price">От 2000 Р.</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
-                <button class="brown-button hotel-booking-button">Забронировать</button>
-              </td>
-              <td class="hotel-rate-column">
-                <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"></div>
-                <div class="hotel-rate">Рейтинг: 9,2</div>
-              </td>
-            </tr>
-        </table>
+        <div class="hotel-sort-kind-wrapper">
+          <label class="hotel-sort-legend">Сортировка:</label>
+          <ol class="hotel-sort-kind-list">
+            <li class="hotel-sort-kind hotel-sort-kind-selected">По цене</li> <!-- TODO: выбрать через java-script -->
+            <li class="hotel-sort-kind">По типу</li>
+            <li class="hotel-sort-kind">По рейтингу</li>
+          </ol>
+        </div>
+        <div class="hotel-sort-order-buttons">
+          <button class="hotel-sort-order-button"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию"></button>
+          <button class="hotel-sort-order-button"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- номера отелей -->
+    <section class="hotel-offers">
+      <ol>
+        <li class="hotel-offer">
+          <p class="hotel-preview-photo">
+            <img src="img/amara-resort-spa-preview-photo.jpg" width="135" height="90" alt="фото отеля">
+          </p>
+          <table class="hotel-description">
+            <tbody>
+              <tr>
+                <th colspan="2"><h2 class="hotel-name">Amara Resort & Spa</h2></th>
+              </tr>
+              <tr>
+                <td class="hotel-kind">Гостиница</td>
+                <td class="hotel-price">От 4000 Р.</td>
+              </tr>
+              <tr>
+                <td><button class="blue-button hotel-details-button">Подробнее</button></td>
+                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="hotel-rate">
+            <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
+            <div class="hotel-rate-text">Рейтинг: 8,5</div>
+          </div>
+        </li>
+        <li class="hotel-offer">
+          <p class="hotel-preview-photo">
+            <img src="img/desert-quail-inn-preview-photo.jpg" width="135" height="90" alt="фото отеля">
+          </p>
+          <table class="hotel-description">
+            <tbody>
+              <tr>
+                <th colspan="2"><h2 class="hotel-name">Desert Quail Inn</h2></th>
+              </tr>
+              <tr>
+                <td class="hotel-kind">Мотель</td>
+                <td class="hotel-price">От 3000 Р</td>
+              </tr>
+              <tr>
+                <td><button class="blue-button hotel-details-button">Подробнее</button></td>
+                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="hotel-rate">
+            <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"></div>
+            <div class="hotel-rate-text">Рейтинг: 8,9</div>
+          </div>
+        </li>
+        <li class="hotel-offer">
+          <p class="hotel-preview-photo">
+            <img src="img/villas-at-poco-diablo-preview-photo.jpg" width="135" height="90" alt="фото отеля">
+          </p>
+          <table class="hotel-description">
+            <tbody>
+              <tr>
+                <th colspan="2"><h2 class="hotel-name">Villas at Poco Diablo</h2></th>
+              </tr>
+              <tr>
+                <td class="hotel-kind">Апартаменты</td>
+                <td class="hotel-price">От 2000 Р</td>
+              </tr>
+              <tr>
+                <td><button class="blue-button hotel-details-button">Подробнее</button></td>
+                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="hotel-rate">
+            <div class="hotel-rate-stars"><img src="img/star.svg"><img src="img/star.svg"></div>
+            <div class="hotel-rate-text">Рейтинг: 9,2</div>
+          </div>
+        </li>
+      </ol>
     </section>
   </main>
 

@@ -3,9 +3,10 @@
     /* общие цвета */
     --background-color: #FFFFFF;
     --text-color: #000000;
+    --inactive-text-color: rgba(0, 0, 0, 0.3);
     --invert-text-color: #FFFFFF;
     --secondary-text-color: #333333;
-    
+
     --button-invert-color: #FFFFFF;
     --button-invert-disabled-color: #333333;
     
@@ -36,7 +37,6 @@
     --hotel-price-scale-color: rgba(255,255,255,0.3);
     --hotel-price-toggle-center-color: #ABABAB;
     --hotel-price-toggle-shadow-color: rgba(171,171,171,0.3);
-    --hotel-sort-kind-text-color: rgba(0,0,0,0.3);
 }
 
 /* общие свойства */
@@ -177,6 +177,8 @@ img {
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-grid {
@@ -388,7 +390,6 @@ img {
     height: 130px;
     padding: 0;
     margin: 0;
-    outline-offset: -1px;
     display: flex;
     align-items: flex-end;
     padding-bottom: 8px;
@@ -398,7 +399,6 @@ img {
     height: 70px;
     padding: 0;
     margin: 0;
-    outline-offset: -1px;
     display: flex;
     align-items: center;
     padding-top: -4px;
@@ -408,7 +408,6 @@ img {
     height: 130px;
     padding: 0;
     margin: 0;
-    outline-offset: -1px;
     display: flex;
     align-items: flex-start;
 }
@@ -539,8 +538,6 @@ img {
 .hotel-filter-form {
     padding: 26px 113px 8px 113px;
     display: flex;
-    outline: greenyellow solid 2px;
-    outline-offset: -2px;
 }
 
 .hotel-filters-features,
@@ -553,13 +550,6 @@ img {
     padding: 0;
     margin: 0;
     border: 0;
-}
-
-.hotel-filters-fieldset,
-.hotel-filters-fieldset ul
-{
-    outline: red solid 1px;
-    outline-offset: -1px;
 }
 
 .hotel-filter-option label {
@@ -630,16 +620,12 @@ img {
     width: 50%;
     display: flex;
     justify-content: flex-end;
-    outline: pink solid 1px;
-    outline-offset: -1px;
 }
 
 .hotel-filters-price-inline-wrapper {
     width: 65%;
     display: flex;
     flex-direction: column;
-    outline: orange solid 1px;
-    outline-offset: -1px;
 }
 
 .hotel-filters-price {
@@ -709,22 +695,16 @@ img {
     width: 4px;
     height: 4px;
     padding: 0;
-    border: 8px solid var(--invert-text-color);
+    border: 9px solid var(--invert-text-color);
     background-color: var(--hotel-price-toggle-center-color);
     border-radius: 50%;
     box-shadow: 0 2px 0 0 var(--hotel-price-toggle-shadow-color);
     cursor: pointer;
 }
 
-/*
-.hotel-price-range-controls .toggle-min {
-    left: 18px;
+.hotel-price-range-controls .toggle:hover {
+    transform: scale(1.1);
 }
-
-.hotel-price-range-controls .toggle-max {
-    left: 160px;
-}
-*/
 
 .hotel-filter-button-apply {
     color: var(--button-invert-color);
@@ -744,16 +724,14 @@ img {
 
 /* количество отелей */
 
-.hotel-box {
-    margin: 0 113px;
+.hotel-sort-section {
+    padding: 0 113px;
 }
 
 .hotel-sort-box-wrapper {
     display: flex;
     align-items: center;
     margin: 29px 0;
-    width: 100%;
-    outline: orange solid 1px;
 }
 
 .hotel-count-label,
@@ -767,10 +745,6 @@ img {
 
 /* опции сортировки */
 
-.hotel-sort-kind-wrapper {
-    margin-left: 46px;
-}
-
 .hotel-sort-legend {
     color: var(--text-color);
     font-size: 12px;
@@ -778,16 +752,13 @@ img {
     text-transform: uppercase;
 }
 
-.hotel-sort-kind {
-    color: var(--hotel-sort-kind-text-color);
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-}
-
-.hotel-sort-box,
+.hotel-sort-section,
 .hotel-sort-kind-list {
     display: inline-block;
+}
+
+.hotel-sort-kind-list {
+    list-style-type: none;
 }
 
 .hotel-sort-kind-list li {
@@ -795,24 +766,23 @@ img {
     display: inline;
 }
 
-.hotel-sort-kind-list {
-    list-style-type: none;
-}
-
 .hotel-sort-order-buttons {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    outline: red solid 1px;
+}
+
+.hotel-sort-kind-wrapper {
+    margin-left: 46px;
 }
 
 .hotel-sort-kind {
-    color: var(--text-color);
     font-size: 12px;
     line-height: 18px;
-    opacity: 0.3;
+    color: var(--inactive-text-color);
     border-bottom: var(--light-blue-color) dotted 1px;
     margin-left: 32px;
+    text-transform: uppercase;
 }
 
 .hotel-sort-kind-selected {
@@ -825,7 +795,7 @@ img {
 }
 
 .hotel-sort-kind:active {
-    color: var(--light-gray-color);
+    color: var(--text-color);
     border: none;
 }
 
@@ -842,36 +812,42 @@ img {
 
 /* предложения с отелями */
 
-.hotel-offers {
-    border-collapse: collapse;
+.hotel-offers ol,
+.hotel-offers li {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.hotel-offer {
-    display: table;
-    width: 976px;
+.hotel-offers ol {
+    display: flex;
+    flex-direction: column;
 }
 
-.hotel-offer td {
-    border-color: var(--hotel-separator-line-color);
-    border-style: solid;
-    border-top: 1;
-    border-bottom: 1;
-    border-left: 0;
-    border-right: 0;
+.hotel-offers li {
+    list-style: none;
+    display: flex;
+}
+
+li.hotel-offer {
+    display: flex;
+    padding: 22px 113px;
+    border-bottom: var(--hotel-separator-line-color) solid 1px;
 }
 
 .hotel-preview-photo {
     width: 175px;
     height: 90px;
+    margin: 0;
+    align-self: flex-end;
 }
 
-.hotel-preview-photo td {
-    width: 175px;
-    height: 90px;
-}
-
-.table-description {
-    text-align: left;
+.hotel-description {
+    margin: 0;
+    padding: 0;
+    border: none;
+    align-self: flex-end;
+    border-spacing: 0;
 }
 
 .hotel-name {
@@ -880,25 +856,53 @@ img {
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 .hotel-kind,
 .hotel-price {
     color: var(--gray-text-color);
+    text-transform: uppercase;
+    padding-top: 11px;
     font-size: 14px;
     line-height: 21px;
-    text-transform: uppercase;
 }
 
-.hotel-rate-column {
-    width: 100px;
+.hotel-price {
+    padding-left: 6px;
+}
+
+.hotel-details-button,
+.hotel-booking-button {
+    margin-top: 11px;
+    margin-bottom: 0;
+    border: none;
+    padding: 3px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.hotel-booking-button {
+    margin-left: 6px;
+}
+
+.hotel-rate {
+    justify-self: flex-end;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .hotel-rate-stars {
     color: var(--light-blue-color);
 }
 
-.hotel-rate {
+.hotel-rate-text {
     color: var(--rate-text-color);
     background: var(--rate-background-color);
     font-size: 14px;
