@@ -458,40 +458,20 @@ img {
     text-align: center;
 }
 
-.hotel-search-header {
-    color: var(--invert-text-color);
-    background-color: var(--brown-color);
-    height: 102px;
-    width: 568px;
-    box-sizing: border-box;
+.hotel-search-header-button-wrapper {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 0;
-    display: table;
 }
 
-.hotel-search-header-inline-box
-{
-    display: table-cell;
-    text-align: center;
-}
-/*
-.hotel-search-header-text button {
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-transform: uppercase;
-}
-*/
 .hotel-search-header-button
 {
     color: var(--invert-text-color);
-    background-color: transparent;
+    background-color: var(--brown-color);
     border: none;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
+    padding: 30px 125px;
 }
 
 .brown-button
