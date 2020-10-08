@@ -812,6 +812,10 @@ img {
 
 /* предложения с отелями */
 
+.hotel-offers {
+    border-top: var(--hotel-separator-line-color) solid 1px;
+}
+
 .hotel-offers ol,
 .hotel-offers li {
     margin: 0;
