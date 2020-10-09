@@ -31,6 +31,7 @@
     --hotel-separator-line-color: #E5E5E5;
     --rate-text-color: #666666;
     --rate-background-color: #F2F2F2;
+    --rate-hover-background-color: #EBEBEB;
     --disabled-gray-color: #6A6A6A;
     
     /* кнопки задания диапазона */
@@ -555,11 +556,25 @@ input.modal-hotel-search-date-input:not(:first-of-type) {
     padding: 5px;
     border: none;
     background-color: var(--rate-background-color);
+    border: var(--rate-background-color) 2px solid;
 }
 
 .modal-hotel-search-count-input {
     padding: 8px;
     align-self: center;
+    border: var(--rate-background-color) 2px solid;
+}
+
+.modal-hotel-search-input:hover:hover,
+.modal-hotel-search-count-input:hover {
+    background-color: var(--rate-hover-background-color);
+    border: var(--rate-hover-background-color) 2px solid;
+}
+
+.modal-hotel-search-input:active:active,
+.modal-hotel-search-count-input:active {
+    background-color: var(--background-color);
+    border: var(--hotel-separator-line-color) 2px solid;
 }
 
 .adults-count-wrapper {
@@ -582,6 +597,7 @@ input.modal-hotel-search-date-input:not(:first-of-type) {
 
 .modal-hotel-search-count-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .modal-hotel-search-count-wrapper,
@@ -590,7 +606,6 @@ input.modal-hotel-search-date-input:not(:first-of-type) {
 }
 
 .modal-hotel-search-count-input {
-    border: none;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -612,22 +627,26 @@ input.modal-hotel-search-count-input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
-.minus-button {
-    align-self: center;
-    background: transparent url("../img/minus.svg") no-repeat;
-    background-position: center;
+.modal-hotel-search-count-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     width: 38px;
     height: 38px;
+    background-color: var(--rate-background-color);
 }
 
-.plus-button {
-    align-self: center;
-    background: transparent url("../img/plus.svg") no-repeat;
-    background-position: center;
+.modal-hotel-search-count-button svg:hover {
+    fill: var(--text-color);
+}
+
+.modal-hotel-search-count-button svg:active {
+    fill: var(--light-blue-color);
+}
+
+.modal-hotel-search-count-button:active {
     border: none;
-    width: 38px;
-    height: 38px;
 }
 
 .modal-hotel-search-form button[type="submit"] {
@@ -635,17 +654,22 @@ input.modal-hotel-search-count-input[type=number] {
     grid-column-end: 5;
 }
 
-.hotel-date-input {
-    width: 100%;
-}
-
 .modal-hotel-search-date-input::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     display: block;
     opacity: 1;
+    background: none;
     background: url("../img/calendar.svg") no-repeat;
     width: 22px;
     height: 21px;
+}
+
+.modal-hotel-search-date-input::-webkit-calendar-picker-indicator:hover {
+    background: url("../img/calendar-hover.svg") no-repeat;
+}
+
+.modal-hotel-search-date-input::-webkit-calendar-picker-indicator:active {
+    background: url("../img/calendar-active.svg") no-repeat;
 }
 
 .modal-hotel-search-button {
@@ -1069,13 +1093,10 @@ li.hotel-offer {
     padding: 0 113px;
 }
 
-.contacts-wrapper {
-    display: table;
-    width: 325px;
-}
-
 .contacts {
-    text-align: center;
+    width: 33%;
+    flex-direction: column;
+    display: flex;
 }
 
 .contacts,
@@ -1087,8 +1108,8 @@ li.hotel-offer {
     text-transform: uppercase;
 }
 
-.social-network-links-wrapper {
-    width: 324px;
+.social-network-links {
+    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1123,18 +1144,12 @@ a.social-button {
     height:15px;
 }
 
-.htmlacademy-wrapper
+.htmlacademy
 {
-    width: 325px;
+    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-div.htmlacademy
-{
-    text-align: center;
-    vertical-align: middle;
 }
 
 .htmlacademy img {
@@ -1146,12 +1161,13 @@ div.htmlacademy
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
+    padding-right: 5px;
 }
 
-.htmlacademy:hover a {
+.htmlacademy svg:hover {
     fill: var(--light-blue-color);
 }
 
-.htmlacademy:active a {
+.htmlacademy svg:active {
     fill: var(--htmlacademy-gray-color);
 }
