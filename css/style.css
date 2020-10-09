@@ -505,6 +505,159 @@ img {
     background-color: var(--dark-blue-color);
 }
 
+/* modal hotel search */
+
+.modal-hotel-search-section {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-hotel-search-form {
+    display: grid;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 55px;
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    grid-template-columns: auto auto auto auto;
+    text-transform: uppercase;
+}
+
+.modal-hotel-search-label1-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+div.modal-hotel-search-label1-wrapper:not(:first-of-type),
+input.modal-hotel-search-date-input:not(:first-of-type) {
+    margin-top: 29px;
+}
+
+.children-count-label-wrapper {
+    display: flex;
+}
+
+.modal-hotel-search-label3-wrapper {
+    padding-left: 53px;
+    padding-right: 33px;
+    align-self: center;
+}
+
+.modal-hotel-search-date-input {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.modal-hotel-search-input {
+    padding: 5px;
+    border: none;
+    background-color: var(--rate-background-color);
+}
+
+.modal-hotel-search-count-input {
+    padding: 8px;
+    align-self: center;
+}
+
+.adults-count-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 29px;
+}
+
+.children-count-label-wrapper {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-top: 29px;
+}
+
+.children-count-wrapper {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    margin-top: 29px;
+}
+
+.modal-hotel-search-count-wrapper {
+    display: flex;
+}
+
+.modal-hotel-search-count-wrapper,
+.modal-hotel-search-count-input {
+    background: var(--rate-background-color);
+}
+
+.modal-hotel-search-count-input {
+    border: none;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+input.modal-hotel-search-count-input {
+    width: 36px;
+    text-align: center;
+}
+
+input.modal-hotel-search-count-input::-webkit-outer-spin-button,
+input.modal-hotel-search-count-input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;  /* Chrome */
+    margin: 0;
+}
+
+input.modal-hotel-search-count-input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.minus-button {
+    align-self: center;
+    background: transparent url("../img/minus.svg") no-repeat;
+    background-position: center;
+    border: none;
+    width: 38px;
+    height: 38px;
+}
+
+.plus-button {
+    align-self: center;
+    background: transparent url("../img/plus.svg") no-repeat;
+    background-position: center;
+    border: none;
+    width: 38px;
+    height: 38px;
+}
+
+.modal-hotel-search-form button[type="submit"] {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.hotel-date-input {
+    width: 100%;
+}
+
+.modal-hotel-search-date-input::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    opacity: 1;
+    background: url("../img/calendar.svg") no-repeat;
+    width: 22px;
+    height: 21px;
+}
+
+.modal-hotel-search-button {
+    padding: 16px 181px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 54px;
+    align-self: center;
+}
+
 /* hotel page */
 
 /* параметры поиска отелей */
@@ -572,7 +725,7 @@ img {
     background-position: 0 0;
   }
   
-  .hotel-filter-input-checkbox:checked + label::after {
+ .hotel-filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
     left: -40px;
@@ -582,7 +735,7 @@ img {
     background-image: url("../img/checkboxon.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    }+++
+}
 
 .hotel-filter-input-checkbox:disabled
 {
@@ -624,7 +777,6 @@ img {
     width: 80px;
 }
 
-
 .hotel-filter-price-inputs-wrapper {
     border-radius: 2px;
     border: 2px solid var(--invert-text-color);
@@ -633,7 +785,7 @@ img {
     width: 100%;
 }
 
-.hotel-filter-price-inputs-wrapper tr:before {
+.hotel-filter-price-inputs-wrapper tr::before {
     content: "";
     position: absolute;
     left: 50%;

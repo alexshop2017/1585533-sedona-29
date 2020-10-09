@@ -166,33 +166,32 @@
       </div>
     </div>
 
-    <div class="map-area"><img src="img/sedona-map.png" width="1200" height="594"></div>
-    <section class="modal">
-      <form>
-        <div>
-          <label for="hotel-start-date">Дата заезда:</label>
-          <input class="hotel-date" type="date" id="hotel-start-date"></input>
-          <button></button> <!--псевдоэлемент иконка внутри даты-->
+    <section class="modal-hotel-search-section">
+      <form class="modal-hotel-search-form">
+        <div class="modal-hotel-search-label1-wrapper"><label for="hotel-start-date" class="modal-hotel-search-label1">Дата заезда:</label></div>
+        <input class="modal-hotel-search-date-input modal-hotel-search-input" type="date" id="hotel-start-date"></input>
+        <div class="modal-hotel-search-label1-wrapper"><label for="hotel-end-date" class="modal-hotel-search-label1">Дата выезда:</label></div>
+        <input class="modal-hotel-search-date-input modal-hotel-search-input" type="date" id="hotel-end-date"></input>
+        <div class="modal-hotel-search-label1-wrapper"><label for="adults-count" class="modal-hotel-search-label1">Взрослые:</label></div>
+
+        <div class="adults-count-wrapper modal-hotel-search-count-wrapper">
+          <button type="button" class="minus-button modal-hotel-search-count-button" width=38px height=38px></button>
+          <input class="modal-hotel-search-count-input" type="number" id="adults-count" value="2"></input>
+          <button type="button" class="plus-button modal-hotel-search-count-button" width=38px height=38px></button>
         </div>
-        <div>
-          <label for="hotel-end-date">Дата выезда:</label>
-          <input class="hotel-date" type="date" id="hotel-end-date"></input>
-          <button></button> <!--псевдоэлемент иконка внутри даты-->
+        <div class="children-count-label-wrapper">
+          <div class="modal-hotel-search-label3-wrapper"><label for="children-count">Дети:</label></div>
         </div>
-        <div>
-          <label for="adults-count">Взрослые:</label>
-          <button></button> <!--псевдоэлемент кнопка минус-->
-          <input class="count" type="number" id="adults-count"></input>
-          <button></button> <!--псевдоэлемент кнопка плюс-->
-          
-          <label for="children-count">Дети:</label>
-          <button></button> <!--псевдоэлемент кнопка минус-->
-          <input class="count" type="number" id="children-count"></input>
-          <button></button> <!--псевдоэлемент кнопка плюс-->
+        <div class="children-count-wrapper modal-hotel-search-count-wrapper">
+          <button type="button" class="minus-button modal-hotel-search-count-button" width=38px height=38px></button>
+          <input class="modal-hotel-search-count-input" type="number" id="children-count" value="0"></input>
+          <button type="button" class="plus-button modal-hotel-search-count-button" width=38px height=38px></button>
         </div>
-        <button type="submit" class="blue-button">Найти</button>
+        <button type="submit" class="modal-hotel-search-button blue-button">Найти</button>
       </form>
     </section>
+    <div class="map-area"><img src="img/sedona-map.png" width="1200" height="594"></div>
+
   </main>
 
   <footer class="main-footer">
