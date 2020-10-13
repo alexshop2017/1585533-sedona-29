@@ -63,11 +63,13 @@ img {
 .index-page-body {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
+    background-color: var(--minor-background-color);
 }
 
 .page-body {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
+    background-color: var(--minor-background-color);
 }
 
 .visually-hidden {
@@ -86,9 +88,7 @@ img {
 .main-header,
 .container,
 .main-footer {
-    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2),
-     -40px 0 0 0 var(--minor-background-color),
-      40px 0 0 0 var(--minor-background-color);
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 /* header */
@@ -187,11 +187,12 @@ img {
     grid-column-end: 3;
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color);
 }
 
 .main-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* main page */
@@ -221,8 +222,8 @@ img {
 }
 
 .main-intro {
-    margin-top: 42px;
-    margin-bottom: 51px;
+    padding-top: 42px;
+    padding-bottom: 51px;
 }
 
 .city-description {
@@ -244,8 +245,6 @@ img {
 
 .primary-sight-text-box-photo {
     height: 256px;
-    margin: 0;
-    padding: 0;
 }
 
 .primary-sight-text-box-1 {
@@ -262,6 +261,8 @@ img {
     height: 256px;
     background-position: center center;
     background-size: cover;
+    font-size: 0;
+    line-height: 0;
 }
 
 .feature-1 {
@@ -318,17 +319,12 @@ img {
 
 .primary-sight-text-box {
     background-color: var(--light-blue-color);
-    display: table;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    width: 400px;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-.primary-sight-text-inline-box {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .primary-sight-header {
@@ -350,13 +346,10 @@ img {
 
 .secondary-sight-text-box {
     background-color: var(--light-gray-color);
-    display: table;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 256px;
-}
-
-.secondary-sight-text-inline-box {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .secondary-sight-header {
@@ -379,11 +372,8 @@ img {
    display: flex;
    flex-direction: column;
    height: 330px;
-   width: 400px;
    margin: auto;
    align-items: center;
-   padding: 0;
-   margin: 0;
 }
 
 .feature-icon-wrapper {
@@ -428,10 +418,6 @@ img {
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-}
-
-.hotel-search-box {
-    display: none;
 }
 
 .hotel-search-intro-box {
@@ -777,10 +763,7 @@ input.modal-hotel-search-count-input[type=number] {
     width: 65%;
     display: flex;
     flex-direction: column;
-}
-
-.hotel-filters-price {
-    width: 100%;
+    align-items: center;
 }
 
 .hotel-filter-price-column {
@@ -792,15 +775,16 @@ input.modal-hotel-search-count-input[type=number] {
     border: none;
     background-color: transparent;
     color: var(--invert-text-color);
-    width: 80px;
+    text-align: center;
+    width: 95%;
 }
 
 .hotel-filter-price-inputs-wrapper {
     border-radius: 2px;
     border: 2px solid var(--invert-text-color);
     margin-top: 16px;
-    position: relative;
     width: 100%;
+    position: relative;
 }
 
 .hotel-filter-price-inputs-wrapper tr::before {
@@ -1061,6 +1045,7 @@ li.hotel-offer {
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
+    padding: 3px 12px;
 }
 
 .map-area {
@@ -1091,6 +1076,8 @@ li.hotel-offer {
     width: 33%;
     flex-direction: column;
     display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .contacts,
@@ -1143,8 +1130,7 @@ a.social-button {
     height:15px;
 }
 
-.htmlacademy
-{
+.htmlacademy {
     width: 33%;
     display: flex;
     justify-content: center;
