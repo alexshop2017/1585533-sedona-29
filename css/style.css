@@ -129,7 +129,6 @@ img {
 .main-header {
     padding: 0;
     margin-top: 0;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -443,21 +442,6 @@ img {
     text-align: center;
 }
 
-.hotel-search-header-button-wrapper {
-    text-align: center;
-}
-
-.hotel-search-header-button {
-    color: var(--invert-text-color);
-    background-color: var(--brown-color);
-    border: none;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-transform: uppercase;
-    padding: 30px 125px;
-}
-
 .brown-button {
     color: var(--invert-text-color);
     background-color: var(--brown-color);
@@ -490,20 +474,45 @@ img {
 
 /* modal hotel search */
 
-.modal-hotel-search-section {
-    display: flex;
-    justify-content: center;
+.hotel-search-header-button-wrapper {
+    width: 50%;
+    margin: auto;
+}
+
+.hotel-search-header-button {
+    color: var(--invert-text-color);
+    background-color: var(--brown-color);
+    border: none;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    padding: 30px 0;
+    outline: green solid 1px;
+    width: 100%;
+}
+
+.modal-hotel-search-form-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .modal-hotel-search-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: grid;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
-    padding: 55px;
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
     grid-template-columns: auto auto auto auto;
     text-transform: uppercase;
+    background-color: var(--background-color);
+    padding: 55px;
 }
 
 .modal-hotel-search-label1-wrapper {
