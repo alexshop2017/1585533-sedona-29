@@ -475,7 +475,7 @@ img {
 /* modal hotel search */
 
 .hotel-search-header-button-wrapper {
-    width: 50%;
+    width: 47.3%;
     margin: auto;
 }
 
@@ -488,18 +488,17 @@ img {
     line-height: 26px;
     text-transform: uppercase;
     padding: 30px 0;
-    outline: green solid 1px;
     width: 100%;
 }
 
-.modal-hotel-search-form-wrapper {
+.hotel-search-dialog-form-wrapper {
     width: 100%;
     padding: 0;
     margin: 0;
     position: relative;
 }
 
-.modal-hotel-search-form {
+.hotel-search-dialog-form {
     position: absolute;
     top: 0;
     left: 0;
@@ -509,13 +508,13 @@ img {
     font-size: 14px;
     line-height: 26px;
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto 1fr auto 1fr;
     text-transform: uppercase;
     background-color: var(--background-color);
     padding: 55px;
 }
 
-.modal-hotel-search-label1-wrapper {
+.hotel-search-dialog-label1-wrapper {
     grid-column-start: 1;
     grid-column-end: 2;
     padding-right: 16px;
@@ -523,8 +522,8 @@ img {
     align-items: center;
 }
 
-div.modal-hotel-search-label1-wrapper:not(:first-of-type),
-input.modal-hotel-search-date-input:not(:first-of-type) {
+div.hotel-search-dialog-label1-wrapper:not(:first-of-type),
+input.hotel-search-dialog-date-input:not(:first-of-type) {
     margin-top: 29px;
 }
 
@@ -532,40 +531,43 @@ input.modal-hotel-search-date-input:not(:first-of-type) {
     display: flex;
 }
 
-.modal-hotel-search-label3-wrapper {
-    padding-left: 53px;
+.hotel-search-dialog-label3-wrapper {
+    padding-left: 33px;
     padding-right: 33px;
     align-self: center;
 }
 
-.modal-hotel-search-date-input {
+.hotel-search-dialog-date-input {
     grid-column-start: 2;
     grid-column-end: 5;
 }
 
-.modal-hotel-search-input {
-    padding: 5px;
-    border: none;
+.hotel-search-dialog-input {
+    padding: 6px 5px;
     background-color: var(--minor-background-color);
-    border: var(--minor-background-color) 2px solid;
+    border: none;
 }
 
-.modal-hotel-search-count-input {
-    padding: 8px;
+.hotel-search-dialog-count-input {
+    padding: 8px 0;
     align-self: center;
-    border: var(--minor-background-color) 2px solid;
+/*    border: var(--minor-background-color) 2px solid; */
+    border: none;
+    width: 38px;
+    box-sizing: border-box;
 }
 
-.modal-hotel-search-input:hover:hover,
-.modal-hotel-search-count-input:hover {
+.hotel-search-dialog-input:hover:hover,
+.hotel-search-dialog-count-input:hover {
     background-color: var(--rate-hover-background-color);
-    border: var(--rate-hover-background-color) 2px solid;
+    /*border: var(--rate-hover-background-color) 2px solid;*/
+    border: none;
 }
 
-.modal-hotel-search-input:active:active,
-.modal-hotel-search-count-input:active {
+.hotel-search-dialog-input:active:active,
+.hotel-search-dialog-count-input:active {
     background-color: var(--background-color);
-    border: var(--hotel-separator-line-color) 2px solid;
+    border: none;
 }
 
 .adults-count-wrapper {
@@ -586,39 +588,39 @@ input.modal-hotel-search-date-input:not(:first-of-type) {
     margin-top: 29px;
 }
 
-.modal-hotel-search-count-wrapper {
+.hotel-search-dialog-count-wrapper {
     display: flex;
     align-items: center;
 }
 
-.modal-hotel-search-count-wrapper,
-.modal-hotel-search-count-input {
+.hotel-search-dialog-count-wrapper,
+.hotel-search-dialog-count-input {
     background: var(--minor-background-color);
 }
 
-.modal-hotel-search-count-input {
+.hotel-search-dialog-count-input {
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
 }
 
-input.modal-hotel-search-count-input {
+input.hotel-search-dialog-count-input {
     width: 36px;
     text-align: center;
 }
 
-input.modal-hotel-search-count-input::-webkit-outer-spin-button,
-input.modal-hotel-search-count-input::-webkit-inner-spin-button
+input.hotel-search-dialog-count-input::-webkit-outer-spin-button,
+input.hotel-search-dialog-count-input::-webkit-inner-spin-button
 {
     -webkit-appearance: none;  /* Chrome */
     margin: 0;
 }
 
-input.modal-hotel-search-count-input[type=number] {
+input.hotel-search-dialog-count-input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
-.modal-hotel-search-count-button {
+.hotel-search-dialog-count-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -628,24 +630,24 @@ input.modal-hotel-search-count-input[type=number] {
     background-color: var(--minor-background-color);
 }
 
-.modal-hotel-search-count-button svg:hover {
+.hotel-search-dialog-count-button svg:hover {
     fill: var(--text-color);
 }
 
-.modal-hotel-search-count-button svg:active {
+.hotel-search-dialog-count-button svg:active {
     fill: var(--light-blue-color);
 }
 
-.modal-hotel-search-count-button:active {
+.hotel-search-dialog-count-button:active {
     border: none;
 }
 
-.modal-hotel-search-form button[type="submit"] {
+.hotel-search-dialog-form button[type="submit"] {
     grid-column-start: 1;
     grid-column-end: 5;
 }
 
-.modal-hotel-search-date-input::-webkit-calendar-picker-indicator {
+.hotel-search-dialog-date-input::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     display: block;
     opacity: 1;
@@ -655,15 +657,15 @@ input.modal-hotel-search-count-input[type=number] {
     height: 21px;
 }
 
-.modal-hotel-search-date-input::-webkit-calendar-picker-indicator:hover {
+.hotel-search-dialog-date-input::-webkit-calendar-picker-indicator:hover {
     background: url("../img/calendar-hover.svg") no-repeat;
 }
 
-.modal-hotel-search-date-input::-webkit-calendar-picker-indicator:active {
+.hotel-search-dialog-date-input::-webkit-calendar-picker-indicator:active {
     background: url("../img/calendar-active.svg") no-repeat;
 }
 
-.modal-hotel-search-button {
+.hotel-search-dialog-button {
     padding: 16px 181px;
     text-transform: uppercase;
     font-weight: bold;
