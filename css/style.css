@@ -999,8 +999,16 @@ input.hotel-search-dialog-count-input[type=number] {
     background-color: var(--background-color);
 }
 
-.hotel-sort-order-button-active {
-    color: var(--light-blue-color);
+.hotel-sort-order-button-active svg {
+    fill: var(--light-blue-color);
+}
+
+.hotel-sort-order-button:hover svg {
+    fill: var(--text-color);
+}
+
+.hotel-sort-order-button:active svg {
+    fill: var(--light-blue-color);
 }
 
 /* предложения с отелями */
