@@ -748,7 +748,7 @@ input.hotel-search-dialog-count-input[type=number] {
     padding: 0 24px 0 0;
 }
 
-.hotel-filter-input-checkbox:not(:checked) + label::before {
+.hotel-filter-input-checkbox:not(:checked):enabled + label::before {
     content: "";
     position: absolute;
     left: -40px;
@@ -760,7 +760,7 @@ input.hotel-search-dialog-count-input[type=number] {
     background-position: 0 0;
   }
   
- .hotel-filter-input-checkbox:checked + label::after {
+ .hotel-filter-input-checkbox:checked:enabled + label::after {
     content: "";
     position: absolute;
     left: -40px;
@@ -768,6 +768,30 @@ input.hotel-search-dialog-count-input[type=number] {
     width: 26px;
     height: 23px;
     background-image: url("../img/checkboxon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.hotel-filter-input-checkbox:not(:checked):disabled + label::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 26px;
+    height: 23px;
+    background-image: url("../img/checkboxoff-disabled.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.hotel-filter-input-checkbox:checked:disabled + label::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 26px;
+    height: 23px;
+    background-image: url("../img/checkboxon-disabled.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -877,15 +901,17 @@ input.hotel-search-dialog-count-input[type=number] {
     color: var(--button-invert-color);
     background-color: transparent;
     border: 2px solid var(--button-invert-color);
+    border-radius: 2px;
     align-self: center;
     margin-top: 13px;
     padding: 7px 35px;
+    cursor: pointer;
 }
 
 .hotel-filter-button-apply:hover {
     color: var(--text-color);
     background-color: var(--background-color);
-    border: 2px solid var(--text-color);
+    border-radius: 2px;
 }
 
 /* количество отелей */
@@ -930,6 +956,7 @@ input.hotel-search-dialog-count-input[type=number] {
 .hotel-sort-kind-list li {
     list-style-type: none;
     display: inline;
+    cursor: pointer;
 }
 
 .hotel-sort-order-buttons {
@@ -1067,6 +1094,7 @@ li.hotel-offer {
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
 }
 
 .hotel-rate {
