@@ -647,21 +647,40 @@ input.hotel-search-dialog-count-input[type=number] {
     grid-column-end: 5;
 }
 
+/*скрываем стандартную иконку с датой (Chrome,Mozilla)*/
 .hotel-search-dialog-date-input::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     display: block;
     opacity: 1;
     background: none;
-    background: url("../img/calendar.svg") no-repeat;
-    width: 22px;
-    height: 21px;
 }
 
-.hotel-search-dialog-date-input::-webkit-calendar-picker-indicator:hover {
+.hotel-search-dialog-date-input {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+ .hotel-search-dialog-date-input::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    width: 26px;
+    height: 23px;
+    background-image: url("../img/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.hotel-search-dialog-date-input:hover::after  {
     background: url("../img/calendar-hover.svg") no-repeat;
 }
 
-.hotel-search-dialog-date-input::-webkit-calendar-picker-indicator:active {
+.hotel-search-dialog-date-input:active::after  {
     background: url("../img/calendar-active.svg") no-repeat;
 }
 
