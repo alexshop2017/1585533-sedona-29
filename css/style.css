@@ -240,6 +240,10 @@ img {
 .primary-sight-text-box {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .primary-sight-text-box-photo {
@@ -304,7 +308,7 @@ img {
     grid-column-end: 4;
 }
 
-.hotel-search-and-map-section {
+.hotel-search-section {
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -346,6 +350,7 @@ img {
 .secondary-sight-text-box {
     background-color: var(--light-gray-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 256px;
