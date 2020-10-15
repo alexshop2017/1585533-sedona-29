@@ -496,6 +496,7 @@ img {
     text-transform: uppercase;
     padding: 30px 0;
     width: 100%;
+    cursor: pointer;
 }
 
 .hotel-search-dialog-form-wrapper {
@@ -558,7 +559,6 @@ input.hotel-search-dialog-date-input:not(:first-of-type) {
 .hotel-search-dialog-count-input {
     padding: 8px 0;
     align-self: center;
-/*    border: var(--minor-background-color) 2px solid; */
     border: none;
     width: 38px;
     box-sizing: border-box;
@@ -567,7 +567,6 @@ input.hotel-search-dialog-date-input:not(:first-of-type) {
 .hotel-search-dialog-input:hover:hover,
 .hotel-search-dialog-count-input:hover {
     background-color: var(--rate-hover-background-color);
-    /*border: var(--rate-hover-background-color) 2px solid;*/
     border: none;
 }
 
@@ -635,13 +634,14 @@ input.hotel-search-dialog-count-input[type=number] {
     width: 38px;
     height: 38px;
     background-color: var(--minor-background-color);
+    cursor: pointer;
 }
 
-.hotel-search-dialog-count-button svg:hover {
+.hotel-search-dialog-count-button:hover svg {
     fill: var(--text-color);
 }
 
-.hotel-search-dialog-count-button svg:active {
+.hotel-search-dialog-count-button:active svg {
     fill: var(--light-blue-color);
 }
 
@@ -699,6 +699,7 @@ input.hotel-search-dialog-count-input[type=number] {
     line-height: 26px;
     margin-top: 54px;
     align-self: center;
+    cursor: pointer;
 }
 
 /* hotel page */
