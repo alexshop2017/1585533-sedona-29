@@ -248,6 +248,8 @@ img {
 
 .primary-sight-text-box-photo {
     height: 256px;
+    font-size: 0;
+    line-height: 0;
 }
 
 .primary-sight-text-box-1 {
@@ -264,8 +266,6 @@ img {
     height: 256px;
     background-position: center center;
     background-size: cover;
-    font-size: 0;
-    line-height: 0;
 }
 
 .feature-1 {
@@ -387,7 +387,9 @@ img {
     display: flex;
     align-items: flex-end;
     padding-bottom: 8px;
- }
+    font-size: 0;
+    line-height: 0;
+}
 
 .feature-header-wrapper {
     height: 70px;
@@ -1050,9 +1052,6 @@ li.hotel-offer {
     height: 90px;
     margin: 0;
     align-self: flex-end;
-}
-
-.hotel-preview-photo img {
     font-size: 0;
     line-height: 0;
 }
