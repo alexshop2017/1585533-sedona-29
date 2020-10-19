@@ -462,6 +462,7 @@ img {
 
 .brown-button:active,
 .hotel-search-header:active {
+    color: var(--hotel-price-scale-color);
     background-color: var(--high-dark-brown-color);
 }
 
@@ -476,6 +477,7 @@ img {
 }
 
 .blue-button:active {
+    color: var(--hotel-price-scale-color);
     background-color: var(--dark-blue-color);
 }
 
@@ -977,16 +979,21 @@ input.hotel-search-dialog-count-input[type=number] {
     margin-left: 46px;
 }
 
-.hotel-sort-kind {
+.hotel-sort-kind,
+button.hotel-sort-kind {
     font-size: 12px;
     line-height: 18px;
     color: var(--inactive-text-color);
+    border: none;
     border-bottom: var(--light-blue-color) dotted 1px;
     margin-left: 32px;
     text-transform: uppercase;
+    background-color: var(--background-color);
+    cursor: pointer;
 }
 
-.hotel-sort-kind-selected {
+.hotel-sort-kind-selected,
+button.hotel-sort-kind-selected {
     color: var(--light-blue-color);
     border: none;
 }
@@ -997,7 +1004,6 @@ input.hotel-search-dialog-count-input[type=number] {
 
 .hotel-sort-kind:active {
     color: var(--text-color);
-    border: none;
 }
 
 /* кнопки сортировки */
@@ -1074,6 +1080,14 @@ li.hotel-offer {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+}
+
+.hotel-name:hover {
+    color: var(--light-blue-color);
+}
+
+.hotel-name:active {
+    color: var(--inactive-text-color);
 }
 
 .hotel-details-and-price {

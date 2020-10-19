@@ -34,15 +34,15 @@
           <legend class="hotel-filter-legend">Инфраструктура:</legend>
           <ul>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-pool" checked></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-pool" name="hotel-filter-pool" checked></input>
               <label for="hotel-filter-pool">Бассейн</label>
             </li>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-parking"></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-parking" name="hotel-filter-parking"></input>
               <label for="hotel-filter-parking">Парковка</label>
             </li>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-wifi"></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-wifi" name="hotel-filter-wifi"></input>
               <label for="hotel-filter-wifi">Wi-Fi</label>
             </li>
           </ul>
@@ -51,15 +51,15 @@
           <legend class="hotel-filter-legend">Тип жилья:</legend>
           <ul>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-hotel" checked></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-hotel" name="hotel-filter-hotel" checked></input>
               <label for="hotel-filter-hotel">Гостиница</label>
             </li>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-motel" checked></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-motel" name="hotel-filter-motel" checked></input>
               <label for="hotel-filter-motel">Мотель</label>
             </li>
             <li class="hotel-filter-option hotel-filter-checkbox">
-              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-apartments" checked></input>
+              <input class="visually-hidden hotel-filter-input-checkbox hotel-filter-input" type="checkbox" id="hotel-filter-apartments" name="hotel-filter-apartments" checked></input>
               <label for="hotel-filter-apartments">Апартаменты</label>
             </li>
           </ul>
@@ -71,10 +71,10 @@
               <table class="hotel-filter-price-inputs-wrapper">
                 <tr>
                   <td class="hotel-filter-price-column">
-                    <input class="hotel-filter-price-input" type="text" id="hotel-filter-price-from" value="От 0"></input>
+                    <input class="hotel-filter-price-input" type="text" id="hotel-filter-price-from" name="hotel-filter-price-from" value="От 0"></input>
                   </td>
                   <td class="hotel-filter-price-column">
-                    <input class="hotel-filter-price-input" type="text" id="hotel-filter-price-to" value="До 3000"></input>
+                    <input class="hotel-filter-price-input" type="text" id="hotel-filter-price-to" name="hotel-filter-price-to" value="До 3000"></input>
                   </td>
                 </tr>
               </table>
@@ -86,7 +86,7 @@
                 <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
               </div>
             </fieldset>
-            <button class="hotel-filter-button-apply">Показать</button>
+            <button class="hotel-filter-button-apply" id="hotel-filter-button-apply" name="hotel-filter-button-apply">Показать</button>
           </div>
         </div>
       </form>
@@ -97,23 +97,29 @@
       <div class="hotel-sort-box-wrapper">
         <div>
           <label class="hotel-count-label" for="hotel-count-output">Найдено: </label>
-          <output class="hotel-count-output" id="hotel-count-output">3</output>
+          <output class="hotel-count-output" id="hotel-count-output" name="hotel-count-output">3</output>
         </div>
         <div class="hotel-sort-kind-wrapper">
           <label class="hotel-sort-legend">Сортировка:</label>
           <ol class="hotel-sort-kind-list">
-            <li class="hotel-sort-kind hotel-sort-kind-selected">По цене</li> <!-- TODO: выбрать через java-script -->
-            <li class="hotel-sort-kind">По типу</li>
-            <li class="hotel-sort-kind">По рейтингу</li>
+            <li>
+              <button class="hotel-sort-kind hotel-sort-kind-selected" id="hotel-sort-kind-price" name="hotel-sort-kind-price">По цене</button>
+            </li>
+            <li>
+              <button class="hotel-sort-kind" id="hotel-sort-kind-type" name="hotel-sort-kind-type">По типу</button>
+            </li>
+            <li>
+              <button class="hotel-sort-kind" id="hotel-sort-kind-rating" name="hotel-sort-kind-rating">По рейтингу</button>
+            </li>
           </ol>
         </div>
         <div class="hotel-sort-order-buttons">
-          <button class="hotel-sort-order-button hotel-sort-order-button-active">
+          <button class="hotel-sort-order-button hotel-sort-order-button-active" id="hotel-sort-order-ascending" name="hotel-sort-order-ascending">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg" alt="Сортировка по возрастанию">
               <path d="M5.5 0L0 10H11L5.5 0Z"/>
             </svg>
           </button>
-          <button class="hotel-sort-order-button">
+          <button class="hotel-sort-order-button" id="hotel-sort-order-descending" name="hotel-sort-order-descending">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg" alt="Сортировка по убыванию">
               <path d="M5.5 10L0 0H11"/>
             </svg>   
