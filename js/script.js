@@ -37,19 +37,18 @@ try {
 hotelSearchButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     hotelSearchDialogForm.classList.toggle("visually-hidden");
-
-    if (isStorageSupport) {
-      } else {
-      }
+    hotelSearchDialogForm.classList.add("hotel-search-dialog-form-active");
+    hotelSearchDialogForm.classList.remove("hotel-search-dialog-form-error");
 });
 
 hotelSearchDialogForm.addEventListener("submit", function (evt) {
-    if (!hotelSearchStartDateInput.value
-        || !hotelSearchEndDateInput.value
-        || !hotelSearchAdultCountInput.value
-        || !hotelSearchChildrenCountInput.value
+    if (!isValidDate(hotelSearchStartDateInput.value)
+        || !isValidDate(hotelSearchEndDateInput.value)
+        || !isValidInteger(hotelSearchAdultCountInput.value) || hotelSearchAdultCountInput.value == 0
+        || !isValidInteger(hotelSearchChildrenCountInput.value)
         ) {
       evt.preventDefault();
+      hotelSearchDialogForm.classList.add("hotel-search-dialog-form-error");
     } else {
       localStorage.setItem("hotelSearchStartDate", hotelSearchStartDateInput.value);
       localStorage.setItem("hotelSearchEndDate", hotelSearchEndDateInput.value);
@@ -57,3 +56,33 @@ hotelSearchDialogForm.addEventListener("submit", function (evt) {
       localStorage.setItem("childrenCount", hotelSearchChildrenCountInput.value);
     }
   });
+
+  function isValidDate(s) {
+    var d = new Date(s);
+    if ( Object.prototype.toString.call(d) === "[object Date]" )
+    {
+      if (isNaN(d.getTime()))
+      {
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
+    else
+    {
+      return true;
+    }
+  }
+
+  function isValidInteger(s) {
+    return  !isNaN(s) && 
+      !isNaN(parseInt(s));
+  }
+
+  hotelSearchDialogForm.addEventListener("webkitAnimationEnd", function (evt) {
+    hotelSearchDialogForm.classList.remove("hotel-search-dialog-form-active");
+    hotelSearchDialogForm.classList.remove("hotel-search-dialog-form-error");
+  });
+  

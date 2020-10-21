@@ -524,6 +524,56 @@ img {
     padding: 55px;
 }
 
+.hotel-search-dialog-form-active {
+    animation: bounce 0.6s;
+}
+
+.hotel-search-dialog-form-error {
+    animation: shake 0.6s;
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-86px);
+    }
+  
+    70% {
+      transform: translateY(20px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+
+  
 .hotel-search-dialog-label1-wrapper {
     grid-column-start: 1;
     grid-column-end: 2;
