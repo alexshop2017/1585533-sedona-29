@@ -4,7 +4,6 @@ const hotelSearchStartDateInput = document.getElementById("hotel-start-date");
 const hotelSearchEndDateInput = document.getElementById("hotel-end-date");
 const hotelSearchAdultCountInput = document.getElementById("adults-count");
 const hotelSearchChildrenCountInput = document.getElementById("children-count");
-const hotelSearchDialogSubmitButton = document.getElementById("hotel-search-dialog-submit");
 
 let isStorageSupport = true;
 
