@@ -1212,6 +1212,7 @@ li.hotel-offer {
     grid-column-end: 3;
     background-color: var(--footer-background-color);
     height: 120px;
+    z-index: 2;
 }
 
 .footer-wrapper {
