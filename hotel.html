@@ -5,7 +5,7 @@
     <title>Отели в Седоне</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   
   <body class="page-body">
@@ -86,7 +86,7 @@
                 <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
               </div>
             </fieldset>
-            <button class="hotel-filter-button-apply" id="hotel-filter-button-apply" name="hotel-filter-button-apply">Показать</button>
+            <button type="submit" class="hotel-filter-button-apply" id="hotel-filter-button-apply" name="hotel-filter-button-apply">Показать</button>
           </div>
         </div>
       </form>
@@ -103,23 +103,23 @@
           <label class="hotel-sort-legend">Сортировка:</label>
           <ol class="hotel-sort-kind-list">
             <li>
-              <button class="hotel-sort-kind hotel-sort-kind-selected" id="hotel-sort-kind-price" name="hotel-sort-kind-price">По цене</button>
+              <button type="button" class="hotel-sort-kind hotel-sort-kind-selected" id="hotel-sort-kind-price" name="hotel-sort-kind-price">По цене</button>
             </li>
             <li>
-              <button class="hotel-sort-kind" id="hotel-sort-kind-type" name="hotel-sort-kind-type">По типу</button>
+              <button type="button" class="hotel-sort-kind" id="hotel-sort-kind-type" name="hotel-sort-kind-type">По типу</button>
             </li>
             <li>
-              <button class="hotel-sort-kind" id="hotel-sort-kind-rating" name="hotel-sort-kind-rating">По рейтингу</button>
+              <button type="button" class="hotel-sort-kind" id="hotel-sort-kind-rating" name="hotel-sort-kind-rating">По рейтингу</button>
             </li>
           </ol>
         </div>
         <div class="hotel-sort-order-buttons">
-          <button class="hotel-sort-order-button hotel-sort-order-button-active" id="hotel-sort-order-ascending" name="hotel-sort-order-ascending">
+          <button type="button" class="hotel-sort-order-button hotel-sort-order-button-active" id="hotel-sort-order-ascending" name="hotel-sort-order-ascending">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg" alt="Сортировка по возрастанию">
               <path d="M5.5 0L0 10H11L5.5 0Z"/>
             </svg>
           </button>
-          <button class="hotel-sort-order-button" id="hotel-sort-order-descending" name="hotel-sort-order-descending">
+          <button type="button" class="hotel-sort-order-button" id="hotel-sort-order-descending" name="hotel-sort-order-descending">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg" alt="Сортировка по убыванию">
               <path d="M5.5 10L0 0H11"/>
             </svg>   
@@ -140,11 +140,11 @@
             <div class="hotel-details-and-price">
               <div class="hotel-details-column">
                 <p class="hotel-kind">Гостиница</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button type="button" class="blue-button hotel-details-button">Подробнее</button>
               </div>
               <div class="hotel-price-column">
                 <p class="hotel-price">От 4000 Р.</p>
-                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+                <button type="button" class="brown-button hotel-booking-button">Забронировать</button>
               </div>
             </div>
           </div>
@@ -162,11 +162,11 @@
             <div class="hotel-details-and-price">
               <div class="hotel-details-column">
                 <p class="hotel-kind">Мотель</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button type="button" class="blue-button hotel-details-button">Подробнее</button>
               </div>
               <div class="hotel-price-column">
                 <p class="hotel-price">От 3000 Р.</p>
-                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+                <button type="button" class="brown-button hotel-booking-button">Забронировать</button>
               </div>
             </div>
           </div>
@@ -184,11 +184,11 @@
             <div class="hotel-details-and-price">
               <div class="hotel-details-column">
                 <p class="hotel-kind">Апартаменты</p>
-                <button class="blue-button hotel-details-button">Подробнее</button>
+                <button type="button" class="blue-button hotel-details-button">Подробнее</button>
               </div>
               <div class="hotel-price-column">
                 <p class="hotel-price">От 2000 Р.</p>
-                <td><button class="brown-button hotel-booking-button">Забронировать</button></td>
+                <button type="button" class="brown-button hotel-booking-button">Забронировать</button>
               </div>
             </div>
           </div>
@@ -234,7 +234,6 @@
       </div>
     </div>
   </footer>
-
 
   </body>
 </html>
