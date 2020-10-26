@@ -49,6 +49,14 @@
 
 /* общие свойства */
 
+@font-face {
+    font-family: "PT Sans";
+    src: url("fonts/ptsans.woff2") format("woff2"),
+         url("fonts/ptsans.woff") format("woff"),
+         url("fonts/ptsansbold.woff2") format("woff2"),
+         url("fonts/ptsansbold.woff") format("woff");
+  }
+
 body {
     min-width: 1200px;
     font-family: "PT Sans", Arial, sans-serif;
@@ -117,7 +125,7 @@ img {
     grid-column-end: 3;
     margin-top: 0;
     background-color: var(--background-color);
-    padding: 0 113px;
+    padding: 0 73px;
 }
 
 /* навигация по сайту */
@@ -126,7 +134,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 113px;
+    padding: 0 72px;
 }
 
 .site-navigation-list {
@@ -270,12 +278,12 @@ img {
 }
 
 .main-intro {
-    padding-top: 42px;
-    padding-bottom: 51px;
+    padding-bottom: 37px;
 }
 
 .city-description {
-    padding-top: 21px;
+    padding-top: 16px;
+    margin-bottom: 17px;
     color: var(--text-color);
     font-weight: bold;
     font-size: 21px;
@@ -423,14 +431,27 @@ img {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
+    margin: 0px;
 }
 
-.primary-sight-description {
+.primary-sight-description,
+.primary-sight-description-number {
     color: var(--invert-text-color);
     font-size: 14px;
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.primary-sight-description-number {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin: 0px;
+}
+
+.primary-sight-description {
+    margin: 0px;
+    padding-bottom: 4px;
 }
 
 .secondary-sight-text-box {
@@ -458,13 +479,26 @@ img {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
+    margin: 0px;
 }
 
+.secondary-sight-description-number,
 .secondary-sight-description {
     color: var(--dark-gray-color);
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.secondary-sight-description-number {
+    padding-top: 26px;
+    padding-bottom: 24px;
+    margin: 0px;
+}
+
+.secondary-sight-description {
+    margin: 0px;
+    padding-bottom: 6px;
 }
 
 .feature {
@@ -538,11 +572,12 @@ img {
     text-transform: uppercase;
     text-align: center;
     width: 100%;
+    margin-top: 6px;
 }
 
 .hotel-search-intro-box {
     padding-top: 30px;
-    height: 188px;
+    height: 207px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
@@ -559,9 +594,10 @@ img {
 
 .hotel-search-intro-description {
     color: var(--text-color);
-    line-height: 21px;
+    line-height: 24px;
     text-transform: uppercase;
     text-align: center;
+    padding-top: 3px;
 }
 
 .brown-button {
@@ -763,9 +799,16 @@ img {
             align-items: center;
 }
 
-div.hotel-search-dialog-label1-wrapper:not(:first-of-type),
-input.hotel-search-dialog-date-input:not(:first-of-type) {
+div.hotel-search-dialog-label1-wrapper2,
+.hotel-search-dialog-date2 {
     margin-top: 29px;
+}
+
+.hotel-search-dialog-label1,
+.hotel-search-dialog-date-input {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
 }
 
 .children-count-label-wrapper {
@@ -782,11 +825,13 @@ input.hotel-search-dialog-date-input:not(:first-of-type) {
         align-self: center;
 }
 
-.hotel-search-dialog-date-input {
+.hotel-search-dialog-date {
     -ms-grid-column: 2;
         grid-column-start: 2;
     -ms-grid-column-span: 3;
     grid-column-end: 5;
+    display: flex;
+    background-color: var(--minor-background-color);
 }
 
 .hotel-search-dialog-input {
@@ -796,7 +841,7 @@ input.hotel-search-dialog-date-input:not(:first-of-type) {
 }
 
 .hotel-search-dialog-count-input {
-    padding: 8px 0;
+    padding: 6px 0;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -858,7 +903,7 @@ input.hotel-search-dialog-date-input:not(:first-of-type) {
 
 .hotel-search-dialog-count-input {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 14px;
     line-height: 26px;
 }
 
@@ -923,35 +968,17 @@ input.hotel-search-dialog-count-input[type=number] {
 }
 
 .hotel-search-dialog-date-input {
-    position: relative;
-    display: block;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+            flex-grow: 1;
 }
 
- .hotel-search-dialog-date-input::after {
-    content: "";
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: auto;
-    bottom: auto;
-    width: 26px;
-    height: 23px;
-    background-image: url("../img/calendar.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.hotel-search-dialog-date-input:hover::after  {
-    background: url("../img/calendar-hover.svg") no-repeat;
-}
-
-.hotel-search-dialog-date-input:active::after  {
-    background: url("../img/calendar-active.svg") no-repeat;
+.calendar-button {
+    border: none;
+    cursor: pointer;
 }
 
 .hotel-search-dialog-button {
@@ -960,7 +987,7 @@ input.hotel-search-dialog-count-input[type=number] {
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
-    margin-top: 54px;
+    margin-top: 50px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -978,7 +1005,7 @@ input.hotel-search-dialog-count-input[type=number] {
 }
 
 .hotel-filter-form {
-    padding: 26px 113px 8px 113px;
+    padding: 26px 73px 8px 73px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1211,7 +1238,7 @@ input.hotel-search-dialog-count-input[type=number] {
 /* количество отелей */
 
 .hotel-sort-section {
-    padding: 0 113px;
+    padding: 0 73px;
 }
 
 .hotel-sort-box-wrapper {
@@ -1353,7 +1380,7 @@ li.hotel-offer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 22px 113px;
+    padding: 22px 73px;
     border-bottom: var(--hotel-separator-line-color) solid 1px;
 }
 
@@ -1504,7 +1531,7 @@ li.hotel-offer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 113px;
+    padding: 0 73px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1535,7 +1562,8 @@ li.hotel-offer {
 }
 
 .contacts p {
-    margin: 5px 0;
+    margin-top: 0px;
+    margin-bottom: 9px;
 }
 
 .social-network-links {

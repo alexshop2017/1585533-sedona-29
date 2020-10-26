@@ -1,5 +1,5 @@
 const hotelSearchButton = document.getElementById("hotel-search-header-button");
-const hotelSearchDialogForm = document.querySelector(".hotel-search-dialog-form");
+const hotelSearchDialogForm = document.getElementById("hotel-search-dialog-form");
 const hotelSearchStartDateInput = document.getElementById("hotel-start-date");
 const hotelSearchEndDateInput = document.getElementById("hotel-end-date");
 const hotelSearchAdultCountInput = document.getElementById("adults-count");
@@ -8,25 +8,24 @@ const hotelSearchChildrenCountInput = document.getElementById("children-count");
 let isStorageSupport = true;
 
 try {
+  if ( hotelSearchDialogForm ) {
+    hotelSearchDialogForm.classList.add("visually-hidden");
+  }
   hotelSearchStartDate = localStorage.getItem("hotelSearchStartDate");
   hotelSearchEndDate = localStorage.getItem("hotelSearchEndDate");
   adultCount = localStorage.getItem("adultCount");
   childrenCount = localStorage.getItem("childrenCount");
 
-  if ( hotelSearchStartDate )
-  {
+  if ( hotelSearchStartDate ) {
       hotelSearchStartDateInput.value = hotelSearchStartDate;
   }
-  if ( hotelSearchEndDate )
-  {
+  if ( hotelSearchEndDate ) {
       hotelSearchEndDateInput.value = hotelSearchEndDate;
   }
-  if ( adultCount )
-  {
+  if ( adultCount ) {
       hotelSearchAdultCountInput.value = adultCount;
   }
-  if ( childrenCount )
-  {
+  if ( childrenCount ) {
       hotelSearchChildrenCountInput.value = childrenCount;
   }
 } catch (err) {
