@@ -134,7 +134,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 72px;
+    padding: 0 73px;
 }
 
 .site-navigation-list {
@@ -1002,6 +1002,7 @@ input.hotel-search-dialog-count-input[type=number] {
     background: var(--dark-blue-color) url(../img/hotel-filter-background.jpg) no-repeat;
     padding: 0;
     background-size: cover;
+    height: 217px;
 }
 
 .hotel-filter-form {
@@ -1013,7 +1014,11 @@ input.hotel-search-dialog-count-input[type=number] {
 
 .hotel-filters-features,
 .hotel-filters-kind {
-    width: 25%;
+    width: 24%;
+}
+
+.hotel-filters-kind {
+
 }
 
 .hotel-filters-fieldset {
@@ -1049,7 +1054,7 @@ input.hotel-search-dialog-count-input[type=number] {
     font-size: 14px;
     line-height: 21px;
     list-style: none;
-    margin-top: 24px;
+    margin-top: 27px;
     padding: 0 24px 0 0;
 }
 
@@ -1113,7 +1118,7 @@ input.hotel-search-dialog-count-input[type=number] {
 }
 
 .hotel-filters-price-wrapper {
-    width: 50%;
+    width: 52%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1123,7 +1128,7 @@ input.hotel-search-dialog-count-input[type=number] {
 }
 
 .hotel-filters-price-inline-wrapper {
-    width: 65%;
+    width: 58%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1158,6 +1163,8 @@ input.hotel-search-dialog-count-input[type=number] {
     margin-top: 16px;
     width: 100%;
     position: relative;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .hotel-filter-price-inputs-wrapper tr::before {
@@ -1224,7 +1231,8 @@ input.hotel-search-dialog-count-input[type=number] {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-top: 13px;
+    margin-top: 22px;
+    margin-right: 10px;
     padding: 7px 35px;
     cursor: pointer;
 }
@@ -1248,7 +1256,7 @@ input.hotel-search-dialog-count-input[type=number] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 29px 0;
+    margin: 19px 0;
 }
 
 .hotel-count-label,
@@ -1276,6 +1284,7 @@ input.hotel-search-dialog-count-input[type=number] {
 
 .hotel-sort-kind-list {
     list-style-type: none;
+    padding-left: 10px;
 }
 
 .hotel-sort-kind-list li {
@@ -1294,10 +1303,12 @@ input.hotel-search-dialog-count-input[type=number] {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    padding-top: 5px;
+    padding-right: 0px;
 }
 
 .hotel-sort-kind-wrapper {
-    margin-left: 46px;
+    margin-left: 32px;
 }
 
 .hotel-sort-kind,
@@ -1307,7 +1318,7 @@ button.hotel-sort-kind {
     color: var(--inactive-text-color);
     border: none;
     border-bottom: var(--light-blue-color) dotted 1px;
-    margin-left: 32px;
+    margin-left: 12px;
     text-transform: uppercase;
     background-color: var(--background-color);
     cursor: pointer;
@@ -1332,6 +1343,8 @@ button.hotel-sort-kind-selected {
 .hotel-sort-order-button {
     border: none;
     background-color: var(--background-color);
+    padding-right: 0px;
+    padding-left: 12px;
 }
 
 .hotel-sort-order-button-active svg {
@@ -1380,12 +1393,12 @@ li.hotel-offer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 22px 73px;
+    padding: 27px 73px;
     border-bottom: var(--hotel-separator-line-color) solid 1px;
 }
 
 .hotel-preview-photo {
-    width: 175px;
+    width: 135px;
     height: 90px;
     margin: 0;
     -ms-flex-item-align: end;
@@ -1397,6 +1410,7 @@ li.hotel-offer {
 .hotel-description {
     margin: 0;
     padding: 0;
+    padding-left: 30px;
     border: none;
     border-spacing: 0;
     display: -webkit-box;
@@ -1448,7 +1462,8 @@ li.hotel-offer {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 21px;
-    margin: 11px 0;
+    margin-top: 3px;
+    margin-bottom: 21px;
 }
 
 .hotel-price,
@@ -1487,8 +1502,8 @@ li.hotel-offer {
             align-items: flex-end;
 }
 
-.hotel-rate-stars {
-    color: var(--light-blue-color);
+.hotel-rate-stars img {
+   margin-left: 4px;
 }
 
 .hotel-rate-text {
@@ -1593,9 +1608,7 @@ li.hotel-offer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 3px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    margin: 0 3px;
 }
 
 .social-network-icon-box:hover {
