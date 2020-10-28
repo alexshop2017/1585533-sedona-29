@@ -795,6 +795,9 @@ img {
 div.hotel-search-dialog-label1-wrapper2,
 .hotel-search-dialog-date2 {
     margin-top: 29px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .hotel-search-dialog-label1,
@@ -827,6 +830,9 @@ div.hotel-search-dialog-label1-wrapper2,
     display: -ms-flexbox;
     display: flex;
     background-color: var(--minor-background-color);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .hotel-search-dialog-input {
@@ -974,9 +980,20 @@ input.hotel-search-dialog-count-input[type=number] {
 }
 
 .calendar-button {
+    width: 21px;
+    height: 23px;
+    margin-right: 9px;
     border: none;
     background: url("../img/calendar.svg");
     cursor: pointer;
+}
+
+.calendar-button:hover {
+    background: url("../img/calendar-hover.svg");
+}
+
+.calendar-button:active {
+    background: url("../img/calendar-active.svg");
 }
 
 .hotel-search-dialog-button {
