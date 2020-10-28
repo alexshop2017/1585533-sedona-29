@@ -975,6 +975,7 @@ input.hotel-search-dialog-count-input[type=number] {
 
 .calendar-button {
     border: none;
+    background: url("../img/calendar.svg");
     cursor: pointer;
 }
 
