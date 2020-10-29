@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   
   <body class="index-page-body">
@@ -133,19 +133,19 @@
 
           <div class="hotel-search-dialog-form-wrapper">
             <form class="hotel-search-dialog-form" id="hotel-search-dialog-form">
-              <div class="hotel-search-dialog-label1-wrapper"><label for="hotel-start-date" class="hotel-search-dialog-label1">Дата заезда:</label></div>
+              <label for="hotel-start-date" class="hotel-search-dialog-label1">Дата заезда:</label>
               <div class="hotel-search-dialog-date">
                 <input class="hotel-search-dialog-date-input hotel-search-dialog-input" type="date" id="hotel-start-date" name="hotel-start-date">
                 <button type="button" class="calendar-button"></button>
               </div>
               
-              <div class="hotel-search-dialog-label1-wrapper hotel-search-dialog-label1-wrapper2"><label for="hotel-end-date" class="hotel-search-dialog-label1">Дата выезда:</label></div>
+              <label for="hotel-end-date" class="hotel-search-dialog-label2">Дата выезда:</label>
               <div class="hotel-search-dialog-date hotel-search-dialog-date2">
                 <input class="hotel-search-dialog-date-input hotel-search-dialog-input" type="date" id="hotel-end-date" name="hotel-end-date">
                 <button type="button" class="calendar-button"></button>
               </div>
               
-              <div class="hotel-search-dialog-label1-wrapper hotel-search-dialog-label1-wrapper2"><label for="adults-count" class="hotel-search-dialog-label1">Взрослые:</label></div>
+              <label for="adults-count" class="hotel-search-dialog-label2">Взрослые:</label>
               <div class="adults-count-wrapper hotel-search-dialog-count-wrapper">
                 <button type="button" class="minus-button hotel-search-dialog-count-button" id="adults-count-minus" name="adults-count-minus">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="#A9A9A9" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@
               </div>
 
               <div class="children-count-label-wrapper">
-                <div class="hotel-search-dialog-label3-wrapper"><label for="children-count">Дети:</label></div>
+                <label class="hotel-search-dialog-label3" for="children-count">Дети:</label>
               </div>
               <div class="children-count-wrapper hotel-search-dialog-count-wrapper">
                 <button type="button" class="minus-button hotel-search-dialog-count-button" id="children-count-minus" name="children-count-minus">
@@ -197,19 +197,13 @@
       </div>
       <div class="social-network-links">
         <a class="social-button" href="#">
-          <div class="social-network-icon-box">
-            <img src="img/twitter.png" width=17 height=15 class="twitter-button" alt="twitter">
-          </div>
+          <img src="img/twitter.png" width=17 height=15 class="twitter-button" alt="twitter">
         </a>
         <a class="social-button" href="#">
-          <div class="social-network-icon-box">
-            <img src="img/facebook.png" width=12 height=22 class="facebook-button" alt="facebook">
-          </div>
+          <img src="img/facebook.png" width=12 height=22 class="facebook-button" alt="facebook">
         </a>
         <a class="social-button" href="#">
-          <div class="social-network-icon-box">
-            <img src="img/youtube.png" width=20 height=16 class="youtube-button" alt="youtube">
-          </div>
+          <img src="img/youtube.png" width=20 height=16 class="youtube-button" alt="youtube">
         </a>
       </div>
       <div class="htmlacademy">

@@ -42,14 +42,6 @@
 
 /* общие свойства */
 
-@font-face {
-    font-family: "PT Sans";
-    src: url("fonts/ptsans.woff2") format("woff2"),
-         url("fonts/ptsans.woff") format("woff"),
-         url("fonts/ptsansbold.woff2") format("woff2"),
-         url("fonts/ptsansbold.woff") format("woff");
-  }
-
 body {
     min-width: 1200px;
     font-family: "PT Sans", Arial, sans-serif;
@@ -772,7 +764,8 @@ img {
   }
 
   
-.hotel-search-dialog-label1-wrapper {
+.hotel-search-dialog-label1,
+.hotel-search-dialog-label2 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-column-span: 1;
@@ -786,7 +779,7 @@ img {
             align-items: center;
 }
 
-div.hotel-search-dialog-label1-wrapper2,
+.hotel-search-dialog-label2,
 .hotel-search-dialog-date2 {
     margin-top: 29px;
     display: -webkit-box;
@@ -807,7 +800,7 @@ div.hotel-search-dialog-label1-wrapper2,
     display: flex;
 }
 
-.hotel-search-dialog-label3-wrapper {
+.hotel-search-dialog-label3 {
     padding-left: 33px;
     padding-right: 33px;
     -ms-flex-item-align: center;
@@ -1614,7 +1607,7 @@ li.hotel-offer {
     margin: 36px;
 }
 
-.social-network-icon-box {
+a.social-button {
     width: 46px;
     height: 48px;
     background-color: var(--light-blue-color);
@@ -1630,21 +1623,16 @@ li.hotel-offer {
     margin: 0 3px;
 }
 
-.social-network-icon-box:hover {
+a.social-button:hover {
     background-color: var(--medium-blue-color);
 }
 
-.social-network-icon-box:active {
+a.social-button:active {
     background-color: var(--dark-blue-color);
 }
 
 a.social-button {
     line-height: 0px;
-}
-
-.twitter-button {
-    width:17px;
-    height:15px;
 }
 
 .htmlacademy {
