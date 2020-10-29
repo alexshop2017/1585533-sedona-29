@@ -1295,6 +1295,7 @@ input.hotel-search-dialog-count-input[type=number] {
 .hotel-sort-section,
 .hotel-sort-kind-list {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .hotel-sort-kind-list {
@@ -1655,10 +1656,6 @@ a.social-button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-}
-
-.htmlacademy img {
-    vertical-align: middle;
 }
 
 .htmlacademy-text {
