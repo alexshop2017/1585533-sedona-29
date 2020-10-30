@@ -1420,14 +1420,9 @@ button.hotel-sort-kind-selected {
       flex-direction: column;
 }
 
-.hotel-offers li {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 
 li.hotel-offer {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1443,6 +1438,7 @@ li.hotel-offer {
     align-self: flex-end;
   font-size: 0;
   line-height: 0;
+  padding-bottom: 4px;
 }
 
 .hotel-description {
@@ -1466,8 +1462,8 @@ li.hotel-offer {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   cursor: pointer;
 }
 
@@ -1501,8 +1497,8 @@ li.hotel-offer {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 21px;
-  margin-top: 3px;
-  margin-bottom: 21px;
+  margin-top: 6px;
+  margin-bottom: 15px;
 }
 
 .hotel-price,
@@ -1519,6 +1515,7 @@ li.hotel-offer {
   font-size: 14px;
   line-height: 21px;
   cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .hotel-rate {
@@ -1539,10 +1536,11 @@ li.hotel-offer {
   -webkit-box-align: end;
     -ms-flex-align: end;
       align-items: flex-end;
+  margin-top: 3px;
 }
 
 .hotel-rate-stars img {
-   margin-left: 1px;
+   margin-left: 2px;
 }
 
 .hotel-rate-text {
@@ -1552,6 +1550,7 @@ li.hotel-offer {
   line-height: 21px;
   text-transform: uppercase;
   padding: 3px 12px;
+  margin-bottom: 3px;
 }
 
 .map-area {
