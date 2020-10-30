@@ -195,6 +195,12 @@ img {
       justify-content: flex-start;
 }
 
+.site-navigation-item:first-child,
+.site-navigation-item:last-child {
+  flex-grow: 0;
+  width: 227px;
+}
+
 .site-navigation-button-right {
   -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -568,8 +574,8 @@ img {
 }
 
 .hotel-search-intro-box {
-  padding-top: 30px;
-  height: 207px;
+  padding-top: 26px;
+  height: 205px;
   -webkit-box-sizing: border-box;
       box-sizing: border-box;
   width: 100%;
@@ -589,7 +595,7 @@ img {
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 2px;
 }
 
 .brown-button {
@@ -783,7 +789,7 @@ img {
     grid-column-start: 1;
   -ms-grid-column-span: 1;
   grid-column-end: 2;
-  padding-right: 16px;
+  padding-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,8 +820,8 @@ img {
 }
 
 .hotel-search-dialog-label3 {
-  padding-left: 33px;
-  padding-right: 33px;
+  padding-left: 55px;
+  padding-right: 28px;
   -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -836,13 +842,13 @@ img {
 }
 
 .hotel-search-dialog-input {
-  padding: 6px 5px;
+  padding: 5px 5px;
   background-color: var(--minor-background-color);
   border: none;
 }
 
 .hotel-search-dialog-count-input {
-  padding: 6px 0;
+  padding: 5px 0;
   -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -1002,7 +1008,7 @@ input.hotel-search-dialog-count-input[type=number] {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  margin-top: 50px;
+  margin-top: 54px;
   -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -1071,6 +1077,10 @@ input.hotel-search-dialog-count-input[type=number] {
   list-style: none;
   margin-top: 25px;
   padding: 0 23px 0 0;
+}
+
+.hotel-filter-checkbox label {
+    text-transform: uppercase;
 }
 
 .hotel-filter-input-checkbox:not(:checked):enabled + label::before {
@@ -1232,7 +1242,7 @@ input.hotel-search-dialog-count-input[type=number] {
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 9px solid var(--invert-text-color);
+  border: 8px solid var(--invert-text-color);
   background-color: var(--hotel-price-toggle-center-color);
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 0 0 var(--hotel-price-toggle-shadow-color);
@@ -1599,6 +1609,7 @@ li.hotel-offer {
     -ms-flex-align: center;
       align-items: center;
   text-align: center;
+  padding-bottom: 7px;
 }
 
 .contacts,
@@ -1675,7 +1686,7 @@ a.social-button {
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 .htmlacademy svg:hover {
