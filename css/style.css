@@ -11,6 +11,7 @@
   --button-invert-disabled-color: #333333;
 
   --footer-background-color: rgba(255, 255, 255, 0.9);
+  --main-photo-background-color: rgba(229, 242, 250, 1);
 
   /*оттенки голубого*/
   --light-blue-color: #81B3D2;
@@ -259,16 +260,18 @@ img {
 }
 
 .main-photo {
-  background: var(--background-color) url("../img/sedona-main-photo.jpg") no-repeat;
+  background: var(--main-photo-background-color) url("../img/sedona-main-photo.jpg") no-repeat;
+  width: 1200px;
+  height: 509px;
 }
 
 .img-text-main-photo {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 76px;
 }
 
 .shape-over-main-photo {
-  padding-top: 15px;
+  padding-top: 19px;
 }
 
 .shape-over-main-photo img {
@@ -276,11 +279,11 @@ img {
 }
 
 .main-intro {
-  padding-bottom: 37px;
+  padding-bottom: 39px;
 }
 
 .city-description {
-  padding-top: 16px;
+  padding-top: 20px;
   margin-bottom: 17px;
   color: var(--text-color);
   font-weight: bold;
