@@ -1171,18 +1171,18 @@ input.hotel-search-dialog-count-input[type=number] {
   border-radius: 2px;
   border: 2px solid var(--invert-text-color);
   border-spacing: 0;
-  margin-top: 16px;
+  margin-top: 12px;
   position: relative;
-  padding-top: 0px;
-  padding-bottom: 4px;
+  padding-top: 1px;
+  padding-bottom: 6px;
 }
 
 .hotel-filter-price-inputs-wrapper::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 10%;
-  height: 80%;
+  top: 15%;
+  height: 70%;
   width: 2px;
   background: var(--invert-text-color);
 }
@@ -1264,10 +1264,11 @@ input.hotel-search-dialog-count-input[type=number] {
   -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-  margin-top: 22px;
+  margin-top: 18px;
   margin-right: 10px;
-  padding: 7px 35px;
+  padding: 8px 33px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .hotel-filter-button-apply:hover {
@@ -1289,7 +1290,7 @@ input.hotel-search-dialog-count-input[type=number] {
   -webkit-box-align: center;
     -ms-flex-align: center;
       align-items: center;
-  margin: 18px 0;
+  margin: 14px 0;
 }
 
 .hotel-count-label,
@@ -1316,15 +1317,22 @@ input.hotel-search-dialog-count-input[type=number] {
   vertical-align: middle;
 }
 
+.hotel-sort-kind-wrapper {
+  margin-left: 46px;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
 .hotel-sort-kind-list {
   list-style-type: none;
-  padding-left: 10px;
+  padding-left: 14px;
 }
 
 .hotel-sort-kind-list li {
   list-style-type: none;
   display: inline;
   cursor: pointer;
+  padding-left: 5px;
 }
 
 .hotel-sort-order-buttons {
@@ -1339,10 +1347,6 @@ input.hotel-search-dialog-count-input[type=number] {
       justify-content: flex-end;
   padding-top: 5px;
   padding-right: 0px;
-}
-
-.hotel-sort-kind-wrapper {
-  margin-left: 32px;
 }
 
 .hotel-sort-kind,
