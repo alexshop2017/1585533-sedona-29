@@ -1033,7 +1033,7 @@ input.hotel-search-dialog-count-input[type=number] {
   background: var(--dark-blue-color) url(../img/hotel-filter-background.jpg) no-repeat;
   padding: 0;
   background-size: cover;
-  height: 217px;
+  padding-bottom: 10px;
 }
 
 .hotel-filter-form {
@@ -1437,19 +1437,20 @@ li.hotel-offer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 73px 28px 73px;
+  padding: 25px 73px 27px 73px;
   border-bottom: var(--hotel-separator-line-color) solid 1px;
 }
 
 .hotel-preview-photo {
   width: 135px;
-  height: 90px;
+  height: 94px;
   margin: 0;
   -ms-flex-item-align: end;
   align-self: flex-end;
   font-size: 0;
   line-height: 0;
-  padding-bottom: 4px;
+  padding-top: 0;
+  flex-shrink: 0;
 }
 
 .hotel-description {
