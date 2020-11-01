@@ -42,6 +42,7 @@
   
   --search-dialog-shadow-color: rgba(0, 1, 1, 0.15);
   --shadow-color: rgba(0, 1, 1, 0.2);
+  --invisible-color: rgba(0, 0, 0, 0);
 }
 
 /* общие свойства */
@@ -977,7 +978,7 @@ input.hotel-search-dialog-count-input[type=number] {
 
 /*скрываем стандартную иконку с датой (Chrome,Mozilla)*/
 .hotel-search-dialog-date-input::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
+  color: var(--text-color);
   display: block;
   opacity: 1;
   background: none;
