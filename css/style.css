@@ -978,7 +978,7 @@ input.hotel-search-dialog-count-input[type=number] {
 
 /*скрываем стандартную иконку с датой (Chrome,Mozilla)*/
 .hotel-search-dialog-date-input::-webkit-calendar-picker-indicator {
-  color: var(--text-color);
+  color: var(--invisible-color);
   display: block;
   opacity: 1;
   background: none;
